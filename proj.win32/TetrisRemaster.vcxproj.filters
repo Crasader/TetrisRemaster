@@ -13,16 +13,25 @@
     <Filter Include="reader">
       <UniqueIdentifier>{7a830947-73d5-4e9c-b222-76d1463b0e8a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Scenes">
+      <UniqueIdentifier>{1085655e-5286-4bbf-9402-d68b91a8957b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Blocks">
+      <UniqueIdentifier>{09e6ab5a-5050-4f79-a357-65c4e877aced}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\AppDelegate.cpp">
+    <ClCompile Include="..\Classes\*.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\HelloWorldScene.cpp">
-      <Filter>src</Filter>
+	<ClCompile Include="..\Classes\Scenes\*.cpp">
+      <Filter>src\Scenes</Filter>
+    </ClCompile>
+	<ClCompile Include="..\Classes\Blocks\*.cpp">
+      <Filter>src\Blocks</Filter>
     </ClCompile>
     <ClCompile Include="..\creator_to_cocos2dx\reader\**\*.cpp">
       <Filter>reader</Filter>
@@ -32,11 +41,14 @@
     <ClInclude Include="main.h">
       <Filter>win32</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\AppDelegate.h">
+    <ClInclude Include="..\Classes\*.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\HelloWorldScene.h">
-      <Filter>src</Filter>
+	<ClInclude Include="..\Classes\Scenes\*.h">
+      <Filter>src\Scenes</Filter>
+    </ClInclude>
+	<ClInclude Include="..\Classes\Blocks\*.h">
+      <Filter>src\Blocks</Filter>
     </ClInclude>
     <ClInclude Include="..\creator_to_cocos2dx\reader\**\*.h">
       <Filter>reader</Filter>

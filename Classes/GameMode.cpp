@@ -5,7 +5,7 @@ void TetrisGame::GameMode::getSpeed() {
 	throw "Not yet implemented";
 }
 
-Point2D TetrisGame::GameMode::getBlockShadowPos() {
+cocos2d::Vec2 TetrisGame::GameMode::getBlockShadowPos() {
 	// TODO - implement GameMode::getBlockShadowPos
 	throw "Not yet implemented";
 }

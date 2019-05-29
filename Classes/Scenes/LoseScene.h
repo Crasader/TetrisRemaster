@@ -1,8 +1,9 @@
 #ifndef LOSESCENE_H
 #define LOSESCENE_H
+#include "cocos2d.h"
 
 namespace TetrisGame {
-	class LoseScene : TetrisGame::Scene {
+	class LoseScene : cocos2d::Scene {
 	};
 }
 

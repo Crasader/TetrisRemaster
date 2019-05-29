@@ -5,7 +5,7 @@ void TetrisGame::GamePlayScene::handleAction(int PlayerAction_action) {
 	throw "Not yet implemented";
 }
 
-void TetrisGame::GamePlayScene::Init() {
+bool TetrisGame::GamePlayScene::init() {
 	// TODO - implement GamePlayScene::Init
 	throw "Not yet implemented";
 }

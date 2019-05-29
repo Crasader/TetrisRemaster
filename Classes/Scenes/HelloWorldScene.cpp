@@ -25,6 +25,7 @@
 #include "HelloWorldScene.h"
 #include "SimpleAudioEngine.h"
 #include "CreatorReader.h"
+#include <bitset>
 
 USING_NS_CC;
 

@@ -1,12 +1,15 @@
 #ifndef GAMEMODE_H
 #define GAMEMODE_H
+#include <vector>
+#include <bitset>
+#include "cocos2d.h"
 
 namespace TetrisGame {
 	class GameMode {
 
 	protected:
 		int speed;
-		std::vector<std::bitset> board;
+		std::vector<std::vector<char>> board;
 
 	public:
 		virtual void isWin() = 0;
@@ -17,7 +20,7 @@ namespace TetrisGame {
 
 		void getSpeed();
 
-		Point2D getBlockShadowPos();
+		cocos2d::Vec2 getBlockShadowPos();
 
 		void moveBlockByLeft();
 

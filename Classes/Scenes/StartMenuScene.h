@@ -1,8 +1,8 @@
 #ifndef STARTMENUSCENE_H
 #define STARTMENUSCENE_H
-
+#include "cocos2d.h"
 namespace TetrisGame {
-	class StartMenuScene : TetrisGame::Scene {
+	class StartMenuScene : cocos2d::Scene {
 	};
 }
 

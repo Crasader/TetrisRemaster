@@ -125,7 +125,12 @@ target_link_libraries(${APP_NAME} cocos2d)
 target_include_directories(${APP_NAME}
         PRIVATE Classes
         PRIVATE ${COCOS2DX_ROOT_PATH}/cocos/audio/include/
+		PRIVATE creator_to_cocos2dx/reader
 )
+
+# cocos creator supported
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/creator_to_cocos2dx/reader)
+target_link_libraries(${APP_NAME} creator_reader)
 
 # mark app resources
 setup_cocos_app_config(${APP_NAME})

@@ -1,0 +1,296 @@
+{
+	"version": "0.4.0",
+	"root": {
+		"object": {
+			"node": {
+				"contentSize": {
+					"w": 0,
+					"h": 0
+				},
+				"enabled": true,
+				"anchorPoint": {
+					"x": 0,
+					"y": 0
+				},
+				"color": {
+					"r": 255,
+					"g": 255,
+					"b": 255
+				},
+				"opacity": 255,
+				"groupIndex": 0,
+				"colliders": []
+			}
+		},
+		"object_type": "Scene",
+		"children": [
+			{
+				"object": {
+					"contentSize": {
+						"w": 960,
+						"h": 640
+					},
+					"enabled": true,
+					"name": "Canvas",
+					"anchorPoint": {
+						"x": 0.5,
+						"y": 0.5
+					},
+					"color": {
+						"r": 255,
+						"g": 255,
+						"b": 255
+					},
+					"opacity": 255,
+					"position": {
+						"x": 480,
+						"y": 320
+					},
+					"skewX": 0,
+					"skewY": 0,
+					"groupIndex": 0,
+					"colliders": []
+				},
+				"object_type": "Node",
+				"children": [
+					{
+						"object": {
+							"contentSize": {
+								"w": 0,
+								"h": 0
+							},
+							"enabled": true,
+							"name": "Main Camera",
+							"anchorPoint": {
+								"x": 0.5,
+								"y": 0.5
+							},
+							"color": {
+								"r": 255,
+								"g": 255,
+								"b": 255
+							},
+							"opacity": 255,
+							"position": {
+								"x": 0,
+								"y": 0
+							},
+							"skewX": 0,
+							"skewY": 0,
+							"groupIndex": 0,
+							"colliders": []
+						},
+						"object_type": "Node",
+						"children": []
+					}
+				]
+			},
+			{
+				"object": {
+					"node": {
+						"contentSize": {
+							"w": 195,
+							"h": 270
+						},
+						"enabled": true,
+						"name": "HelloWorld",
+						"anchorPoint": {
+							"x": 0.5,
+							"y": 0.5
+						},
+						"color": {
+							"r": 255,
+							"g": 255,
+							"b": 255
+						},
+						"opacity": 255,
+						"position": {
+							"x": 472,
+							"y": 332
+						},
+						"skewX": 0,
+						"skewY": 0,
+						"groupIndex": 0,
+						"colliders": []
+					},
+					"spriteFrameName": "sprites/HelloWorld.png",
+					"spriteType": "Simple",
+					"srcBlend": 770,
+					"dstBlend": 771,
+					"trimEnabled": true,
+					"sizeMode": "Trimmed"
+				},
+				"object_type": "Sprite",
+				"children": []
+			},
+			{
+				"object": {
+					"node": {
+						"contentSize": {
+							"w": 40,
+							"h": 40
+						},
+						"enabled": true,
+						"name": "btnExit",
+						"anchorPoint": {
+							"x": 0.5,
+							"y": 0.5
+						},
+						"color": {
+							"r": 255,
+							"g": 255,
+							"b": 255
+						},
+						"opacity": 255,
+						"position": {
+							"x": 894,
+							"y": 69
+						},
+						"rotationSkewX": 0,
+						"rotationSkewY": 0,
+						"skewX": 0,
+						"skewY": 0,
+						"groupIndex": 0,
+						"colliders": []
+					},
+					"ignoreContentAdaptWithSize": false,
+					"spriteFrameName": "sprites/CloseNormal.png",
+					"transition": 2,
+					"pressedSpriteFrameName": "sprites/CloseSelected.png"
+				},
+				"object_type": "Button",
+				"children": []
+			},
+			{
+				"object": {
+					"node": {
+						"contentSize": {
+							"w": 725.74,
+							"h": 40
+						},
+						"enabled": true,
+						"name": "txtHelloCocos",
+						"anchorPoint": {
+							"x": 0.5,
+							"y": 0.5
+						},
+						"color": {
+							"r": 255,
+							"g": 255,
+							"b": 255
+						},
+						"opacity": 255,
+						"position": {
+							"x": 474,
+							"y": 505
+						},
+						"skewX": 0,
+						"skewY": 0,
+						"groupIndex": 0,
+						"colliders": []
+					},
+					"fontSize": 40,
+					"labelText": "Hello Cocos2dx from Cocos Creator",
+					"horizontalAlignment": "Left",
+					"verticalAlignment": "Top",
+					"overflowType": "None",
+					"enableWrap": true,
+					"fontType": "System",
+					"fontName": "arial"
+				},
+				"object_type": "Label",
+				"children": []
+			}
+		]
+	},
+	"designResolution": {
+		"w": 960,
+		"h": 640
+	},
+	"resolutionFitWidth": false,
+	"resolutionFitHeight": true,
+	"spriteFrames": [
+		{
+			"name": "sprites/HelloWorld.png",
+			"texturePath": "creator/sprites/HelloWorld.png",
+			"rect": {
+				"x": 0,
+				"y": 0,
+				"w": 195,
+				"h": 270
+			},
+			"offset": {
+				"x": 0,
+				"y": 0
+			},
+			"rotated": false,
+			"originalSize": {
+				"w": 195,
+				"h": 270
+			},
+			"centerRect": {
+				"x": 0,
+				"y": 0,
+				"w": 195,
+				"h": 270
+			}
+		},
+		{
+			"name": "sprites/CloseNormal.png",
+			"texturePath": "creator/sprites/CloseNormal.png",
+			"rect": {
+				"x": 0,
+				"y": 0,
+				"w": 40,
+				"h": 40
+			},
+			"offset": {
+				"x": 0,
+				"y": 0
+			},
+			"rotated": false,
+			"originalSize": {
+				"w": 40,
+				"h": 40
+			},
+			"centerRect": {
+				"x": 0,
+				"y": 0,
+				"w": 40,
+				"h": 40
+			}
+		},
+		{
+			"name": "sprites/CloseSelected.png",
+			"texturePath": "creator/sprites/CloseSelected.png",
+			"rect": {
+				"x": 2,
+				"y": 1,
+				"w": 37,
+				"h": 37
+			},
+			"offset": {
+				"x": 0.5,
+				"y": 0.5
+			},
+			"rotated": false,
+			"originalSize": {
+				"w": 40,
+				"h": 40
+			},
+			"centerRect": {
+				"x": 0,
+				"y": 0,
+				"w": 37,
+				"h": 37
+			}
+		}
+	],
+	"collisionMatrix": [
+		{
+			"value": [
+				true
+			]
+		}
+	]
+}

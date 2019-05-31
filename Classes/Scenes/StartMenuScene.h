@@ -8,8 +8,6 @@ namespace TetrisGame {
 	class StartMenuScene : cocos2d::Scene {
 	private:
 
-		void onClickStartMenu(cocos2d::Ref*);
-		void onClickLoadGame(cocos2d::Ref*);
 	public:
 		static cocos2d::Scene* createScene();
 		virtual bool init();

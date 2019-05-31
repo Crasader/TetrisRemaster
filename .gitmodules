@@ -2,3 +2,6 @@
 	path = cocos2d
 	url = https://github.com/cocos2d/cocos2d-x
 	branch = v3
+[submodule "creator_to_cocos2dx"]
+	path = creator_to_cocos2dx
+	url = https://github.com/kim-ninh/creator_to_cocos2dx

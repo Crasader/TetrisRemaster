@@ -3,7 +3,17 @@
 #include "GameMode.h"
 
 namespace TetrisGame {
-	class SurvivalMode : TetrisGame::GameMode {
+	class SurvivalMode : public TetrisGame::GameMode {
+
+	private:
+
+	public:
+
+		bool isWin();
+
+		bool isLose();
+
+		bool virtual_computeScore();
 	};
 }
 

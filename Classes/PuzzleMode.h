@@ -3,10 +3,18 @@
 #include "GameMode.h"
 
 namespace TetrisGame {
-	class PuzzleMode : TetrisGame::GameMode {
+	class PuzzleMode : public TetrisGame::GameMode {
 
 	private:
 		int blockUsed;
+
+	public:
+
+		bool isWin();
+		
+		bool isLose();
+		
+		bool virtual_computeScore();
 	};
 }
 

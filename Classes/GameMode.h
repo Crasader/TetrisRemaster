@@ -12,11 +12,11 @@ namespace TetrisGame {
 		std::vector<std::vector<char>> board;
 
 	public:
-		virtual void isWin() = 0;
-
-		virtual void isLose() = 0;
-
-		virtual void virtual_computeScore() = 0;
+		virtual bool isWin() = 0;
+				
+		virtual bool isLose() = 0;
+				
+		virtual bool virtual_computeScore() = 0;
 
 		void getSpeed();
 

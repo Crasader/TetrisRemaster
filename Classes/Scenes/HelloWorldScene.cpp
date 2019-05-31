@@ -24,39 +24,39 @@
 
 #include "HelloWorldScene.h"
 #include "SimpleAudioEngine.h"
-#include "CreatorReader.h"
+//#include "CreatorReader.h"
 #include <bitset>
 
 USING_NS_CC;
 
-Scene* HelloWorld::createScene()
-{
-	creator::CreatorReader* reader = creator::CreatorReader::createWithFilename("creator/scenes/HelloWorldScene.ccreator");
-
-	// will create the needed spritesheets + design resolution
-	reader->setup();
-
-	// get the scene graph
-	Scene* scene = reader->getSceneGraph();
-	ui::Button *btnExit = dynamic_cast<ui::Button*>(scene->getChildByName("btnExit"));
-
-	btnExit->addTouchEventListener([&](Ref* sender, ui::Widget::TouchEventType type)
-	{
-		switch (type)
-		{
-		case ui::Widget::TouchEventType::BEGAN:
-			break;
-		case ui::Widget::TouchEventType::ENDED:
-			Director::getInstance()->end();
-			break;
-		default:
-			break;
-		}
-	});
-
-	return scene;
-    //return HelloWorld::create();
-}
+//Scene* HelloWorld::createScene()
+//{
+//	creator::CreatorReader* reader = creator::CreatorReader::createWithFilename("creator/scenes/HelloWorldScene.ccreator");
+//
+//	// will create the needed spritesheets + design resolution
+//	reader->setup();
+//
+//	// get the scene graph
+//	Scene* scene = reader->getSceneGraph();
+//	ui::Button *btnExit = dynamic_cast<ui::Button*>(scene->getChildByName("btnExit"));
+//
+//	btnExit->addTouchEventListener([&](Ref* sender, ui::Widget::TouchEventType type)
+//	{
+//		switch (type)
+//		{
+//		case ui::Widget::TouchEventType::BEGAN:
+//			break;
+//		case ui::Widget::TouchEventType::ENDED:
+//			Director::getInstance()->end();
+//			break;
+//		default:
+//			break;
+//		}
+//	});
+//
+//	return scene;
+//    //return HelloWorld::create();
+//}
 
 // Print useful error message instead of segfaulting when files are not there.
 static void problemLoading(const char* filename)

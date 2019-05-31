@@ -27,132 +27,34 @@
     <ClCompile Include="..\creator_to_cocos2dx\reader\**\*.cpp">
       <Filter>reader</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\GameMode.cpp" />
-    <ClCompile Include="..\Classes\PuzzleMode.cpp" />
-    <ClCompile Include="..\Classes\SurvivalMode.cpp" />
-    <ClCompile Include="..\Classes\Blocks\*.cpp">
+    <ClCompile Include="..\Classes\Blocks\Block.cpp">
       <Filter>src\Blocks</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\Scenes\*.cpp">
-      <Filter>src\Scenes</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\Scenes\*.cpp">
-      <Filter>src\Scenes</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\Scenes\*.cpp" />
-    <ClCompile Include="..\Classes\Scenes\*.cpp" />
-    <ClCompile Include="..\Classes\Scenes\*.cpp" />
-    <ClCompile Include="..\Classes\Blocks\*.cpp" />
-    <ClCompile Include="..\Classes\*.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\*.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\*.cpp" />
-    <ClCompile Include="..\Classes\*.cpp" />
-    <ClCompile Include="..\Classes\Scenes\HelloWorldScene.cpp" />
-    <ClCompile Include="..\Classes\Scenes\StartMenuScene.cpp" />
-    <ClCompile Include="..\Classes\Scenes\GamePlayScene.cpp" />
-    <ClCompile Include="..\Classes\Scenes\HelloWorldScene.cpp" />
-    <ClCompile Include="..\Classes\Scenes\StartMenuScene.cpp" />
-    <ClCompile Include="..\Classes\Scenes\GamePlayScene.cpp" />
-    <ClCompile Include="..\Classes\Scenes\HelloWorldScene.cpp" />
-    <ClCompile Include="..\Classes\Scenes\StartMenuScene.cpp" />
-    <ClCompile Include="..\Classes\Blocks\*.cpp">
+    <ClCompile Include="..\Classes\Blocks\BlockFactory.cpp">
       <Filter>src\Blocks</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\Blocks\*.cpp">
-      <Filter>src\Blocks</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\Scenes\*.cpp">
+    <ClCompile Include="..\Classes\Scenes\ChooseModeScene.cpp">
       <Filter>src\Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\Scenes\*.cpp">
+    <ClCompile Include="..\Classes\Scenes\GamePlayScene.cpp">
       <Filter>src\Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\Scenes\*.cpp">
+    <ClCompile Include="..\Classes\Scenes\HelloWorldScene.cpp">
       <Filter>src\Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\Scenes\*.cpp">
+    <ClCompile Include="..\Classes\Scenes\StartMenuScene.cpp">
       <Filter>src\Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\GameMode.cpp" />
-    <ClCompile Include="..\Classes\PuzzleMode.cpp" />
-    <ClCompile Include="..\Classes\SurvivalMode.cpp" />
-    <ClCompile Include="..\Classes\GameMode.cpp" />
-    <ClCompile Include="..\Classes\PuzzleMode.cpp" />
-    <ClCompile Include="..\Classes\SurvivalMode.cpp" />
-    <ClCompile Include="..\Classes\Scenes\*.cpp" />
-    <ClCompile Include="..\Classes\Scenes\*.cpp" />
-    <ClCompile Include="..\Classes\Scenes\*.cpp" />
-    <ClCompile Include="..\Classes\Blocks\*.cpp" />
-    <ClCompile Include="..\Classes\*.cpp">
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\*.cpp">
+    <ClCompile Include="..\Classes\GameMode.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\*.cpp">
+    <ClCompile Include="..\Classes\PuzzleMode.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\*.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\*.cpp" />
-    <ClCompile Include="..\Classes\*.cpp" />
-    <ClCompile Include="..\Classes\*.cpp" />
-    <ClCompile Include="..\Classes\Scenes\GamePlayScene.cpp" />
-    <ClCompile Include="..\Classes\Scenes\HelloWorldScene.cpp" />
-    <ClCompile Include="..\Classes\Scenes\StartMenuScene.cpp" />
-    <ClCompile Include="..\Classes\Scenes\GamePlayScene.cpp" />
-    <ClCompile Include="..\Classes\Scenes\HelloWorldScene.cpp" />
-    <ClCompile Include="..\Classes\Scenes\StartMenuScene.cpp" />
-    <ClCompile Include="..\Classes\Scenes\GamePlayScene.cpp" />
-    <ClCompile Include="..\Classes\Scenes\HelloWorldScene.cpp" />
-    <ClCompile Include="..\Classes\Scenes\StartMenuScene.cpp" />
-    <ClCompile Include="..\Classes\Blocks\BlockFactory.cpp" />
-    <ClCompile Include="..\Classes\Scenes\*.cpp">
-      <Filter>src\Scenes</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\Scenes\*.cpp">
-      <Filter>src\Scenes</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\Scenes\*.cpp">
-      <Filter>src\Scenes</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\Scenes\*.cpp">
-      <Filter>src\Scenes</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\Blocks\*.cpp">
-      <Filter>src\Blocks</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\Blocks\*.cpp">
-      <Filter>src\Blocks</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\GameMode.cpp" />
-    <ClCompile Include="..\Classes\PuzzleMode.cpp" />
-    <ClCompile Include="..\Classes\SurvivalMode.cpp" />
-    <ClCompile Include="..\Classes\GameMode.cpp" />
-    <ClCompile Include="..\Classes\PuzzleMode.cpp" />
-    <ClCompile Include="..\Classes\SurvivalMode.cpp" />
-    <ClCompile Include="..\Classes\GameMode.cpp" />
-    <ClCompile Include="..\Classes\PuzzleMode.cpp" />
-    <ClCompile Include="..\Classes\SurvivalMode.cpp" />
-    <ClCompile Include="..\Classes\Scenes\*.cpp" />
-    <ClCompile Include="..\Classes\Scenes\*.cpp" />
-    <ClCompile Include="..\Classes\Scenes\*.cpp" />
-    <ClCompile Include="..\Classes\Blocks\*.cpp" />
-    <ClCompile Include="..\Classes\*.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\*.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\*.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\*.cpp">
+    <ClCompile Include="..\Classes\SurvivalMode.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -163,194 +65,33 @@
     <ClInclude Include="..\creator_to_cocos2dx\reader\**\*.h">
       <Filter>reader</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\define.h" />
-    <ClInclude Include="..\Classes\GameMode.h" />
-    <ClInclude Include="..\Classes\PlayerAction.h" />
-    <ClInclude Include="..\Classes\PuzzleMode.h" />
-    <ClInclude Include="..\Classes\SurvivalMode.h" />
-    <ClInclude Include="..\Classes\*.h" />
-    <ClInclude Include="..\Classes\*.h" />
-    <ClInclude Include="..\Classes\Scenes\GamePlayScene.h" />
-    <ClInclude Include="..\Classes\Scenes\HelloWorldScene.h" />
-    <ClInclude Include="..\Classes\Scenes\LoseScene.h" />
-    <ClInclude Include="..\Classes\Scenes\PauseMenuScene.h" />
-    <ClInclude Include="..\Classes\Scenes\StartMenuScene.h" />
-    <ClInclude Include="..\Classes\Scenes\GamePlayScene.h" />
-    <ClInclude Include="..\Classes\Scenes\HelloWorldScene.h" />
-    <ClInclude Include="..\Classes\Scenes\LoseScene.h" />
-    <ClInclude Include="..\Classes\Scenes\PauseMenuScene.h" />
-    <ClInclude Include="..\Classes\Scenes\StartMenuScene.h" />
-    <ClInclude Include="..\Classes\Scenes\GamePlayScene.h" />
-    <ClInclude Include="..\Classes\Scenes\HelloWorldScene.h" />
-    <ClInclude Include="..\Classes\Scenes\LoseScene.h" />
-    <ClInclude Include="..\Classes\Scenes\PauseMenuScene.h" />
-    <ClInclude Include="..\Classes\Scenes\StartMenuScene.h" />
-    <ClInclude Include="..\Classes\Scenes\GamePlayScene.h" />
-    <ClInclude Include="..\Classes\Scenes\HelloWorldScene.h" />
-    <ClInclude Include="..\Classes\Scenes\LoseScene.h" />
-    <ClInclude Include="..\Classes\Scenes\PauseMenuScene.h" />
-    <ClInclude Include="..\Classes\Scenes\StartMenuScene.h" />
-    <ClInclude Include="..\Classes\Scenes\GamePlayScene.h" />
-    <ClInclude Include="..\Classes\Scenes\HelloWorldScene.h" />
-    <ClInclude Include="..\Classes\Scenes\LoseScene.h" />
-    <ClInclude Include="..\Classes\Scenes\PauseMenuScene.h" />
-    <ClInclude Include="..\Classes\Scenes\StartMenuScene.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h" />
-    <ClInclude Include="..\Classes\*.h" />
-    <ClInclude Include="..\Classes\*.h" />
-    <ClInclude Include="..\Classes\*.h" />
-    <ClInclude Include="..\Classes\*.h" />
-    <ClInclude Include="..\Classes\Scenes\GamePlayScene.h" />
-    <ClInclude Include="..\Classes\Scenes\HelloWorldScene.h" />
-    <ClInclude Include="..\Classes\Scenes\LoseScene.h" />
-    <ClInclude Include="..\Classes\Scenes\PauseMenuScene.h" />
-    <ClInclude Include="..\Classes\Scenes\StartMenuScene.h" />
-    <ClInclude Include="..\Classes\Scenes\GamePlayScene.h" />
-    <ClInclude Include="..\Classes\Scenes\HelloWorldScene.h" />
-    <ClInclude Include="..\Classes\Scenes\LoseScene.h" />
-    <ClInclude Include="..\Classes\Scenes\PauseMenuScene.h" />
-    <ClInclude Include="..\Classes\Scenes\StartMenuScene.h" />
-    <ClInclude Include="..\Classes\Scenes\GamePlayScene.h" />
-    <ClInclude Include="..\Classes\Scenes\HelloWorldScene.h" />
-    <ClInclude Include="..\Classes\Scenes\LoseScene.h" />
-    <ClInclude Include="..\Classes\Scenes\PauseMenuScene.h" />
-    <ClInclude Include="..\Classes\Scenes\StartMenuScene.h" />
-    <ClInclude Include="..\Classes\Scenes\GamePlayScene.h" />
-    <ClInclude Include="..\Classes\Scenes\HelloWorldScene.h" />
-    <ClInclude Include="..\Classes\Scenes\LoseScene.h" />
-    <ClInclude Include="..\Classes\Scenes\PauseMenuScene.h" />
-    <ClInclude Include="..\Classes\Scenes\StartMenuScene.h" />
-    <ClInclude Include="..\Classes\Scenes\GamePlayScene.h" />
-    <ClInclude Include="..\Classes\Scenes\HelloWorldScene.h" />
-    <ClInclude Include="..\Classes\Scenes\LoseScene.h" />
-    <ClInclude Include="..\Classes\Scenes\PauseMenuScene.h" />
-    <ClInclude Include="..\Classes\Scenes\StartMenuScene.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockFactory.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockType.h" />
-    <ClInclude Include="..\Classes\Blocks\IBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\LBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\OBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\TBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\ZBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockFactory.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockType.h" />
-    <ClInclude Include="..\Classes\Blocks\IBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\LBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\OBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\TBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\ZBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockFactory.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockType.h" />
-    <ClInclude Include="..\Classes\Blocks\IBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\LBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\OBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\TBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\ZBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockFactory.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockType.h" />
-    <ClInclude Include="..\Classes\Blocks\IBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\LBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\OBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\TBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\ZBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockFactory.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockType.h" />
-    <ClInclude Include="..\Classes\Blocks\IBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\LBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\OBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\TBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\ZBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h">
+    <ClInclude Include="..\Classes\Blocks\Block.h">
       <Filter>src\Blocks</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Blocks\*.h">
+    <ClInclude Include="..\Classes\Blocks\BlockFactory.h">
       <Filter>src\Blocks</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Blocks\*.h">
+    <ClInclude Include="..\Classes\Blocks\BlockType.h">
       <Filter>src\Blocks</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Blocks\*.h">
+    <ClInclude Include="..\Classes\Blocks\IBlock.h">
       <Filter>src\Blocks</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Blocks\*.h">
+    <ClInclude Include="..\Classes\Blocks\LBlock.h">
       <Filter>src\Blocks</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Blocks\*.h">
+    <ClInclude Include="..\Classes\Blocks\OBlock.h">
       <Filter>src\Blocks</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Blocks\*.h">
+    <ClInclude Include="..\Classes\Blocks\TBlock.h">
       <Filter>src\Blocks</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Blocks\*.h">
+    <ClInclude Include="..\Classes\Blocks\ZBlock.h">
       <Filter>src\Blocks</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Scenes\*.h">
-      <Filter>src\Scenes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Scenes\*.h">
-      <Filter>src\Scenes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Scenes\*.h">
-      <Filter>src\Scenes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Scenes\*.h">
-      <Filter>src\Scenes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Scenes\GamePlayScene.h">
-      <Filter>src\Scenes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Scenes\HelloWorldScene.h">
-      <Filter>src\Scenes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Scenes\LoseScene.h">
-      <Filter>src\Scenes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Scenes\PauseMenuScene.h">
-      <Filter>src\Scenes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Scenes\StartMenuScene.h">
-      <Filter>src\Scenes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Scenes\*.h">
-      <Filter>src\Scenes</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Scenes\ChooseModeScene.h">
       <Filter>src\Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\GameMode.h" />
-    <ClInclude Include="..\Classes\PlayerAction.h" />
-    <ClInclude Include="..\Classes\PuzzleMode.h" />
-    <ClInclude Include="..\Classes\SurvivalMode.h" />
-    <ClInclude Include="..\Classes\GameMode.h" />
-    <ClInclude Include="..\Classes\PlayerAction.h" />
-    <ClInclude Include="..\Classes\PuzzleMode.h" />
-    <ClInclude Include="..\Classes\SurvivalMode.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h" />
-    <ClInclude Include="..\Classes\*.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\*.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\*.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\*.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\*.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\Scenes\GamePlayScene.h">
       <Filter>src\Scenes</Filter>
     </ClInclude>
@@ -366,246 +107,22 @@
     <ClInclude Include="..\Classes\Scenes\StartMenuScene.h">
       <Filter>src\Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\*.h" />
-    <ClInclude Include="..\Classes\*.h" />
-    <ClInclude Include="..\Classes\*.h" />
-    <ClInclude Include="..\Classes\*.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockFactory.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockType.h" />
-    <ClInclude Include="..\Classes\Blocks\IBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\LBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\OBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\TBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\ZBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockFactory.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockType.h" />
-    <ClInclude Include="..\Classes\Blocks\IBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\LBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\OBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\TBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\ZBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockFactory.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockType.h" />
-    <ClInclude Include="..\Classes\Blocks\IBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\LBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\OBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\TBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\ZBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockFactory.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockType.h" />
-    <ClInclude Include="..\Classes\Blocks\IBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\LBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\OBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\TBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\ZBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockFactory.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockType.h" />
-    <ClInclude Include="..\Classes\Blocks\IBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\LBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\OBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\TBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\ZBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockFactory.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockType.h" />
-    <ClInclude Include="..\Classes\Blocks\IBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\LBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\OBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\TBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\ZBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockFactory.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockType.h" />
-    <ClInclude Include="..\Classes\Blocks\IBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\LBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\OBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\TBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\ZBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h">
-      <Filter>src\Blocks</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Blocks\*.h">
-      <Filter>src\Blocks</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Blocks\*.h">
-      <Filter>src\Blocks</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Blocks\*.h">
-      <Filter>src\Blocks</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Blocks\*.h">
-      <Filter>src\Blocks</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Blocks\*.h">
-      <Filter>src\Blocks</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Blocks\*.h">
-      <Filter>src\Blocks</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Blocks\*.h">
-      <Filter>src\Blocks</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\GameMode.h" />
-    <ClInclude Include="..\Classes\PlayerAction.h" />
-    <ClInclude Include="..\Classes\PuzzleMode.h" />
-    <ClInclude Include="..\Classes\SurvivalMode.h" />
-    <ClInclude Include="..\Classes\GameMode.h" />
-    <ClInclude Include="..\Classes\PlayerAction.h" />
-    <ClInclude Include="..\Classes\PuzzleMode.h" />
-    <ClInclude Include="..\Classes\SurvivalMode.h" />
-    <ClInclude Include="..\Classes\GameMode.h" />
-    <ClInclude Include="..\Classes\PlayerAction.h" />
-    <ClInclude Include="..\Classes\PuzzleMode.h" />
-    <ClInclude Include="..\Classes\SurvivalMode.h" />
-    <ClInclude Include="..\Classes\GameMode.h" />
-    <ClInclude Include="..\Classes\PlayerAction.h" />
-    <ClInclude Include="..\Classes\PuzzleMode.h" />
-    <ClInclude Include="..\Classes\SurvivalMode.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h" />
-    <ClInclude Include="..\Classes\*.h">
+    <ClInclude Include="..\Classes\AppDelegate.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\*.h">
+    <ClInclude Include="..\Classes\define.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\*.h">
+    <ClInclude Include="..\Classes\GameMode.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\*.h">
+    <ClInclude Include="..\Classes\PlayerAction.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\*.h">
+    <ClInclude Include="..\Classes\PuzzleMode.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\*.h" />
-    <ClInclude Include="..\Classes\*.h" />
-    <ClInclude Include="..\Classes\*.h" />
-    <ClInclude Include="..\Classes\*.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockFactory.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockType.h" />
-    <ClInclude Include="..\Classes\Blocks\IBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\LBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\OBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\TBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\ZBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockFactory.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockType.h" />
-    <ClInclude Include="..\Classes\Blocks\IBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\LBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\OBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\TBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\ZBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockFactory.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockType.h" />
-    <ClInclude Include="..\Classes\Blocks\IBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\LBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\OBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\TBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\ZBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockFactory.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockType.h" />
-    <ClInclude Include="..\Classes\Blocks\IBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\LBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\OBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\TBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\ZBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockFactory.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockType.h" />
-    <ClInclude Include="..\Classes\Blocks\IBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\LBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\OBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\TBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\ZBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockFactory.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockType.h" />
-    <ClInclude Include="..\Classes\Blocks\IBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\LBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\OBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\TBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\ZBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockFactory.h" />
-    <ClInclude Include="..\Classes\Blocks\BlockType.h" />
-    <ClInclude Include="..\Classes\Blocks\IBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\LBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\OBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\TBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\ZBlock.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h">
-      <Filter>src\Blocks</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Blocks\*.h">
-      <Filter>src\Blocks</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Blocks\*.h">
-      <Filter>src\Blocks</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Blocks\*.h">
-      <Filter>src\Blocks</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Blocks\*.h">
-      <Filter>src\Blocks</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Blocks\*.h">
-      <Filter>src\Blocks</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Blocks\*.h">
-      <Filter>src\Blocks</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Blocks\*.h">
-      <Filter>src\Blocks</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\define.h" />
-    <ClInclude Include="..\Classes\GameMode.h" />
-    <ClInclude Include="..\Classes\PlayerAction.h" />
-    <ClInclude Include="..\Classes\PuzzleMode.h" />
-    <ClInclude Include="..\Classes\SurvivalMode.h" />
-    <ClInclude Include="..\Classes\define.h" />
-    <ClInclude Include="..\Classes\GameMode.h" />
-    <ClInclude Include="..\Classes\PlayerAction.h" />
-    <ClInclude Include="..\Classes\PuzzleMode.h" />
-    <ClInclude Include="..\Classes\SurvivalMode.h" />
-    <ClInclude Include="..\Classes\define.h" />
-    <ClInclude Include="..\Classes\GameMode.h" />
-    <ClInclude Include="..\Classes\PlayerAction.h" />
-    <ClInclude Include="..\Classes\PuzzleMode.h" />
-    <ClInclude Include="..\Classes\SurvivalMode.h" />
-    <ClInclude Include="..\Classes\define.h" />
-    <ClInclude Include="..\Classes\GameMode.h" />
-    <ClInclude Include="..\Classes\PlayerAction.h" />
-    <ClInclude Include="..\Classes\PuzzleMode.h" />
-    <ClInclude Include="..\Classes\SurvivalMode.h" />
-    <ClInclude Include="..\Classes\define.h" />
-    <ClInclude Include="..\Classes\GameMode.h" />
-    <ClInclude Include="..\Classes\PlayerAction.h" />
-    <ClInclude Include="..\Classes\PuzzleMode.h" />
-    <ClInclude Include="..\Classes\SurvivalMode.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h" />
-    <ClInclude Include="..\Classes\*.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\*.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\*.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\*.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\*.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\*.h">
+    <ClInclude Include="..\Classes\SurvivalMode.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

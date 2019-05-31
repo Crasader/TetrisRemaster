@@ -149,21 +149,40 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)\Resources\" /D /E /I /F /Y
     </PreLinkEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\Classes\*.cpp" />
-    <ClCompile Include="..\Classes\Scenes\*.cpp" />
-    <ClCompile Include="..\Classes\Blocks\*.cpp" />
+    <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\Classes\Blocks\Block.cpp" />
+    <ClCompile Include="..\Classes\Blocks\BlockFactory.cpp" />
+    <ClCompile Include="..\Classes\GameMode.cpp" />
+    <ClCompile Include="..\Classes\PuzzleMode.cpp" />
+    <ClCompile Include="..\Classes\Scenes\ChooseModeScene.cpp" />
+    <ClCompile Include="..\Classes\Scenes\GamePlayScene.cpp" />
+    <ClCompile Include="..\Classes\Scenes\HelloWorldScene.cpp" />
+    <ClCompile Include="..\Classes\Scenes\StartMenuScene.cpp" />
+    <ClCompile Include="..\Classes\SurvivalMode.cpp" />
     <ClCompile Include="..\creator_to_cocos2dx\reader\**\*.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Classes\*.h" />
+    <ClInclude Include="..\Classes\AppDelegate.h" />
+    <ClInclude Include="..\Classes\Blocks\Block.h" />
+    <ClInclude Include="..\Classes\Blocks\BlockFactory.h" />
+    <ClInclude Include="..\Classes\Blocks\BlockType.h" />
+    <ClInclude Include="..\Classes\Blocks\IBlock.h" />
+    <ClInclude Include="..\Classes\Blocks\LBlock.h" />
+    <ClInclude Include="..\Classes\Blocks\OBlock.h" />
+    <ClInclude Include="..\Classes\Blocks\TBlock.h" />
+    <ClInclude Include="..\Classes\Blocks\ZBlock.h" />
+    <ClInclude Include="..\Classes\define.h" />
+    <ClInclude Include="..\Classes\GameMode.h" />
+    <ClInclude Include="..\Classes\PlayerAction.h" />
+    <ClInclude Include="..\Classes\PuzzleMode.h" />
     <ClInclude Include="..\Classes\Scenes\ChooseModeScene.h" />
-    <ClInclude Include="..\Classes\Blocks\*.h" />
     <ClInclude Include="..\Classes\Scenes\GamePlayScene.h" />
     <ClInclude Include="..\Classes\Scenes\HelloWorldScene.h" />
     <ClInclude Include="..\Classes\Scenes\LoseScene.h" />
     <ClInclude Include="..\Classes\Scenes\PauseMenuScene.h" />
     <ClInclude Include="..\Classes\Scenes\StartMenuScene.h" />
+    <ClInclude Include="..\Classes\SurvivalMode.h" />
     <ClInclude Include="..\creator_to_cocos2dx\reader\**\*.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>

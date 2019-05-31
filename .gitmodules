@@ -4,4 +4,4 @@
 	branch = v3
 [submodule "creator_to_cocos2dx"]
 	path = creator_to_cocos2dx
-	url = https://github.com/cocos2d/creator_to_cocos2dx.git
+	url = https://github.com/kim-ninh/creator_to_cocos2dx

@@ -165,7 +165,7 @@
 				"object": {
 					"node": {
 						"contentSize": {
-							"w": 725.74,
+							"w": 515.64,
 							"h": 40
 						},
 						"enabled": true,
@@ -195,8 +195,9 @@
 					"verticalAlignment": "Top",
 					"overflowType": "None",
 					"enableWrap": true,
-					"fontType": "System",
-					"fontName": "arial"
+					"fontName": "creator/e24053dd-f4a6-4edf-b03b-851c3107943c/Marker_Felt.ttf",
+					"fontType": "TTF",
+					"lineHeight": 40
 				},
 				"object_type": "Label",
 				"children": []

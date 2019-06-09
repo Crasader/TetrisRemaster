@@ -13,7 +13,7 @@ void TetrisGame::StartMenuScene::handleButtonsClick()
 	btnNewGame->addClickEventListener([=](Ref*)
 	{
 		experimental::AudioEngine::play2d(menuClick_SFX_Path);
-		auto scene = ChooseModeScene::create();
+		auto scene = ChooseModeScene::createScene();
 		Director::getInstance()->pushScene(scene);
 	});
 

@@ -26,9 +26,6 @@ public:
 		this->_scene = scene;
 		this->_background = sprite;
 	}
-
 	void startScroll();
-
-	void TickMe(float delta);
 };
 

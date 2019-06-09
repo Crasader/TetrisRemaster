@@ -3,13 +3,20 @@
 
 #include "cocos2d.h"
 #include "GamePlayScene.h"
+#include "CreatorReader.h"
+#include "AudioEngine.h"
+#include "BackgroundScroller.h"
+
+USING_NS_CC;
 
 namespace TetrisGame {
 	class ChooseModeScene : public cocos2d::Scene {
 	private:
-		void onClickPuzzleMenuItem(cocos2d::Ref*);
-		void onClickSurvivalMenuItem(cocos2d::Ref*);
-		void onClickBackMenuItem(cocos2d::Ref*);
+		static ui::Button* btnSurvival;
+		static ui::Button* btnPuzzle;
+		static ui::Button* btnTimeRacing;
+		static ui::Button* btnBack;
+		static void handleButtonsClick();
 
 	public:
 		static cocos2d::Scene* createScene();

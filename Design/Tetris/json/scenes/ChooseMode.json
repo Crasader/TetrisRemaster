@@ -1,0 +1,568 @@
+{
+	"version": "0.4.0",
+	"root": {
+		"object": {
+			"node": {
+				"contentSize": {
+					"w": 0,
+					"h": 0
+				},
+				"enabled": false,
+				"anchorPoint": {
+					"x": 0,
+					"y": 0
+				},
+				"color": {
+					"r": 255,
+					"g": 255,
+					"b": 255
+				},
+				"opacity": 255,
+				"groupIndex": 0,
+				"colliders": []
+			}
+		},
+		"object_type": "Scene",
+		"children": [
+			{
+				"object": {
+					"node": {
+						"contentSize": {
+							"w": 1080,
+							"h": 2690
+						},
+						"enabled": true,
+						"name": "galaxy-bg",
+						"anchorPoint": {
+							"x": 0.5,
+							"y": 0.5
+						},
+						"color": {
+							"r": 255,
+							"g": 255,
+							"b": 255
+						},
+						"opacity": 255,
+						"position": {
+							"x": 507,
+							"y": 1330
+						},
+						"skewX": 0,
+						"skewY": 0,
+						"groupIndex": 0,
+						"colliders": []
+					},
+					"spriteFrameName": "ui/Space-Background-Tiled.png",
+					"spriteType": "Simple",
+					"srcBlend": 770,
+					"dstBlend": 771,
+					"trimEnabled": true,
+					"sizeMode": "Trimmed"
+				},
+				"object_type": "Sprite",
+				"children": []
+			},
+			{
+				"object": {
+					"contentSize": {
+						"w": 1024,
+						"h": 768
+					},
+					"enabled": true,
+					"name": "canvas",
+					"anchorPoint": {
+						"x": 0.5,
+						"y": 0.5
+					},
+					"color": {
+						"r": 0,
+						"g": 0,
+						"b": 0
+					},
+					"opacity": 255,
+					"position": {
+						"x": 512,
+						"y": 384
+					},
+					"skewX": 0,
+					"skewY": 0,
+					"groupIndex": 0,
+					"colliders": []
+				},
+				"object_type": "Node",
+				"children": [
+					{
+						"object": {
+							"contentSize": {
+								"w": 0,
+								"h": 0
+							},
+							"enabled": true,
+							"name": "Main Camera",
+							"anchorPoint": {
+								"x": 0.5,
+								"y": 0.5
+							},
+							"color": {
+								"r": 255,
+								"g": 255,
+								"b": 255
+							},
+							"opacity": 255,
+							"position": {
+								"x": 0,
+								"y": 0
+							},
+							"skewX": 0,
+							"skewY": 0,
+							"groupIndex": 0,
+							"colliders": []
+						},
+						"object_type": "Node",
+						"children": []
+					}
+				]
+			},
+			{
+				"object": {
+					"node": {
+						"contentSize": {
+							"w": 444.38,
+							"h": 60
+						},
+						"enabled": true,
+						"name": "gameTitle",
+						"anchorPoint": {
+							"x": 0.5,
+							"y": 0.5
+						},
+						"color": {
+							"r": 255,
+							"g": 255,
+							"b": 255
+						},
+						"opacity": 255,
+						"position": {
+							"x": 517,
+							"y": 640
+						},
+						"skewX": 0,
+						"skewY": 0,
+						"groupIndex": 0,
+						"colliders": []
+					},
+					"fontSize": 60,
+					"labelText": "Game Mode",
+					"horizontalAlignment": "Left",
+					"verticalAlignment": "Top",
+					"overflowType": "None",
+					"enableWrap": true,
+					"fontName": "creator/1fd4ad53-c426-4e5e-be5c-ed8006818b47/kenvector_future.ttf",
+					"fontType": "TTF",
+					"lineHeight": 60
+				},
+				"object_type": "Label",
+				"children": []
+			},
+			{
+				"object": {
+					"node": {
+						"contentSize": {
+							"w": 240,
+							"h": 60
+						},
+						"enabled": true,
+						"name": "btnSurvival",
+						"anchorPoint": {
+							"x": 0.5,
+							"y": 0.5
+						},
+						"color": {
+							"r": 255,
+							"g": 255,
+							"b": 255
+						},
+						"opacity": 255,
+						"position": {
+							"x": 521,
+							"y": 471
+						},
+						"rotationSkewX": 0,
+						"rotationSkewY": 0,
+						"skewX": 0,
+						"skewY": 0,
+						"groupIndex": 0,
+						"colliders": []
+					},
+					"ignoreContentAdaptWithSize": false,
+					"spriteFrameName": "ui/blue_button04.png",
+					"transition": 2,
+					"pressedSpriteFrameName": "ui/yellow_button05.png"
+				},
+				"object_type": "Button",
+				"children": [
+					{
+						"object": {
+							"node": {
+								"contentSize": {
+									"w": 184.84,
+									"h": 40
+								},
+								"enabled": true,
+								"name": "Label",
+								"anchorPoint": {
+									"x": 0.5,
+									"y": 0.5
+								},
+								"color": {
+									"r": 255,
+									"g": 255,
+									"b": 255
+								},
+								"opacity": 255,
+								"position": {
+									"x": 0,
+									"y": 0
+								},
+								"rotationSkewX": 0,
+								"rotationSkewY": 0,
+								"skewX": 0,
+								"skewY": 0,
+								"groupIndex": 0,
+								"colliders": []
+							},
+							"fontSize": 35,
+							"labelText": "Survival",
+							"horizontalAlignment": "Center",
+							"verticalAlignment": "Center",
+							"overflowType": "None",
+							"enableWrap": false,
+							"fontName": "creator/8f38f9d5-fdd2-4d7b-8987-e7e7d58afb12/kenvector_future_thin.ttf",
+							"fontType": "TTF",
+							"lineHeight": 40
+						},
+						"object_type": "Label",
+						"children": []
+					}
+				]
+			},
+			{
+				"object": {
+					"node": {
+						"contentSize": {
+							"w": 240,
+							"h": 60
+						},
+						"enabled": true,
+						"name": "btnPuzzle",
+						"anchorPoint": {
+							"x": 0.5,
+							"y": 0.5
+						},
+						"color": {
+							"r": 255,
+							"g": 255,
+							"b": 255
+						},
+						"opacity": 255,
+						"position": {
+							"x": 521,
+							"y": 355
+						},
+						"rotationSkewX": 0,
+						"rotationSkewY": 0,
+						"skewX": 0,
+						"skewY": 0,
+						"groupIndex": 0,
+						"colliders": []
+					},
+					"ignoreContentAdaptWithSize": false,
+					"spriteFrameName": "ui/blue_button04.png",
+					"transition": 2,
+					"pressedSpriteFrameName": "ui/yellow_button05.png"
+				},
+				"object_type": "Button",
+				"children": [
+					{
+						"object": {
+							"node": {
+								"contentSize": {
+									"w": 148.48,
+									"h": 40
+								},
+								"enabled": true,
+								"name": "Label",
+								"anchorPoint": {
+									"x": 0.5,
+									"y": 0.5
+								},
+								"color": {
+									"r": 255,
+									"g": 255,
+									"b": 255
+								},
+								"opacity": 255,
+								"position": {
+									"x": 0,
+									"y": 0
+								},
+								"rotationSkewX": 0,
+								"rotationSkewY": 0,
+								"skewX": 0,
+								"skewY": 0,
+								"groupIndex": 0,
+								"colliders": []
+							},
+							"fontSize": 35,
+							"labelText": "Puzzle",
+							"horizontalAlignment": "Center",
+							"verticalAlignment": "Center",
+							"overflowType": "None",
+							"enableWrap": false,
+							"fontName": "creator/8f38f9d5-fdd2-4d7b-8987-e7e7d58afb12/kenvector_future_thin.ttf",
+							"fontType": "TTF",
+							"lineHeight": 40
+						},
+						"object_type": "Label",
+						"children": []
+					}
+				]
+			},
+			{
+				"object": {
+					"node": {
+						"contentSize": {
+							"w": 240,
+							"h": 60
+						},
+						"enabled": true,
+						"name": "btnTimeRacing",
+						"anchorPoint": {
+							"x": 0.5,
+							"y": 0.5
+						},
+						"color": {
+							"r": 255,
+							"g": 255,
+							"b": 255
+						},
+						"opacity": 255,
+						"position": {
+							"x": 521,
+							"y": 238
+						},
+						"rotationSkewX": 0,
+						"rotationSkewY": 0,
+						"skewX": 0,
+						"skewY": 0,
+						"groupIndex": 0,
+						"colliders": []
+					},
+					"ignoreContentAdaptWithSize": false,
+					"spriteFrameName": "ui/blue_button04.png",
+					"transition": 2,
+					"pressedSpriteFrameName": "ui/yellow_button05.png"
+				},
+				"object_type": "Button",
+				"children": [
+					{
+						"object": {
+							"node": {
+								"contentSize": {
+									"w": 229.96,
+									"h": 40
+								},
+								"enabled": true,
+								"name": "Label",
+								"anchorPoint": {
+									"x": 0.5,
+									"y": 0.5
+								},
+								"color": {
+									"r": 255,
+									"g": 255,
+									"b": 255
+								},
+								"opacity": 255,
+								"position": {
+									"x": 0,
+									"y": 0
+								},
+								"rotationSkewX": 0,
+								"rotationSkewY": 0,
+								"skewX": 0,
+								"skewY": 0,
+								"groupIndex": 0,
+								"colliders": []
+							},
+							"fontSize": 35,
+							"labelText": "TIME RACING",
+							"horizontalAlignment": "Center",
+							"verticalAlignment": "Center",
+							"overflowType": "None",
+							"enableWrap": false,
+							"fontName": "creator/8f38f9d5-fdd2-4d7b-8987-e7e7d58afb12/kenvector_future_thin.ttf",
+							"fontType": "TTF",
+							"lineHeight": 40
+						},
+						"object_type": "Label",
+						"children": []
+					}
+				]
+			},
+			{
+				"object": {
+					"node": {
+						"contentSize": {
+							"w": 100,
+							"h": 100
+						},
+						"enabled": true,
+						"name": "btnBack",
+						"anchorPoint": {
+							"x": 0.5,
+							"y": 0.5
+						},
+						"color": {
+							"r": 255,
+							"g": 255,
+							"b": 255
+						},
+						"opacity": 255,
+						"position": {
+							"x": 959,
+							"y": 65
+						},
+						"rotationSkewX": 0,
+						"rotationSkewY": 0,
+						"skewX": 0,
+						"skewY": 0,
+						"groupIndex": 0,
+						"colliders": []
+					},
+					"ignoreContentAdaptWithSize": false,
+					"spriteFrameName": "ui/exitRight.png",
+					"transition": 3,
+					"zoomScale": 1.2
+				},
+				"object_type": "Button",
+				"children": []
+			}
+		]
+	},
+	"designResolution": {
+		"w": 1024,
+		"h": 768
+	},
+	"resolutionFitWidth": false,
+	"resolutionFitHeight": true,
+	"spriteFrames": [
+		{
+			"name": "ui/Space-Background-Tiled.png",
+			"texturePath": "creator/ui/Space-Background-Tiled.png",
+			"rect": {
+				"x": 0,
+				"y": 0,
+				"w": 1080,
+				"h": 2690
+			},
+			"offset": {
+				"x": 0,
+				"y": 0
+			},
+			"rotated": false,
+			"originalSize": {
+				"w": 1080,
+				"h": 2690
+			},
+			"centerRect": {
+				"x": 0,
+				"y": 0,
+				"w": 1080,
+				"h": 2690
+			}
+		},
+		{
+			"name": "ui/blue_button04.png",
+			"texturePath": "creator/ui/blue_button04.png",
+			"rect": {
+				"x": 0,
+				"y": 0,
+				"w": 190,
+				"h": 49
+			},
+			"offset": {
+				"x": 0,
+				"y": 0
+			},
+			"rotated": false,
+			"originalSize": {
+				"w": 190,
+				"h": 49
+			},
+			"centerRect": {
+				"x": 0,
+				"y": 0,
+				"w": 190,
+				"h": 49
+			}
+		},
+		{
+			"name": "ui/yellow_button05.png",
+			"texturePath": "creator/ui/yellow_button05.png",
+			"rect": {
+				"x": 0,
+				"y": 0,
+				"w": 190,
+				"h": 45
+			},
+			"offset": {
+				"x": 0,
+				"y": 0
+			},
+			"rotated": false,
+			"originalSize": {
+				"w": 190,
+				"h": 45
+			},
+			"centerRect": {
+				"x": 0,
+				"y": 0,
+				"w": 190,
+				"h": 45
+			}
+		},
+		{
+			"name": "ui/exitRight.png",
+			"texturePath": "creator/ui/exitRight.png",
+			"rect": {
+				"x": 24,
+				"y": 26,
+				"w": 62,
+				"h": 56
+			},
+			"offset": {
+				"x": 5,
+				"y": -4
+			},
+			"rotated": false,
+			"originalSize": {
+				"w": 100,
+				"h": 100
+			},
+			"centerRect": {
+				"x": 0,
+				"y": 0,
+				"w": 62,
+				"h": 56
+			}
+		}
+	],
+	"collisionMatrix": [
+		{
+			"value": [
+				true
+			]
+		}
+	]
+}

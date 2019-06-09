@@ -1,55 +1,65 @@
 #include "ChooseModeScene.h"
 
-USING_NS_CC;
+ui::Button* TetrisGame::ChooseModeScene::btnSurvival = nullptr;
+ui::Button* TetrisGame::ChooseModeScene::btnPuzzle = nullptr;
+ui::Button* TetrisGame::ChooseModeScene::btnTimeRacing = nullptr;
+ui::Button* TetrisGame::ChooseModeScene::btnBack = nullptr;
 
-void TetrisGame::ChooseModeScene::onClickPuzzleMenuItem(cocos2d::Ref *)
+void TetrisGame::ChooseModeScene::handleButtonsClick()
 {
-	auto scene = GamePlayScene::create();
-	scene->setMode(GAME_MODE::PUZZLE);
+	auto menuClick_SFX_Path = "sfx/click5.ogg";
+	btnSurvival->addClickEventListener([=](Ref*)
+	{
+		experimental::AudioEngine::play2d(menuClick_SFX_Path);
+	});
 
-	Director::getInstance()->popScene();
-	Director::getInstance()->replaceScene(scene);
-}
+	btnPuzzle->addClickEventListener([=](Ref*)
+	{
+		experimental::AudioEngine::play2d(menuClick_SFX_Path);
 
-void TetrisGame::ChooseModeScene::onClickSurvivalMenuItem(cocos2d::Ref *)
-{
-}
+		auto scene = GamePlayScene::create();
+		scene->setMode(GAME_MODE::PUZZLE);
 
-void TetrisGame::ChooseModeScene::onClickBackMenuItem(cocos2d::Ref *)
-{
-	Director::getInstance()->popScene();
+		Director::getInstance()->popScene();
+		Director::getInstance()->replaceScene(scene);
+	});
+
+	btnTimeRacing->addClickEventListener([=](Ref*)
+	{
+		experimental::AudioEngine::play2d(menuClick_SFX_Path);
+	});
+
+	btnBack->addClickEventListener([=](Ref*)
+	{
+		experimental::AudioEngine::play2d(menuClick_SFX_Path);
+		Director::getInstance()->popScene();
+	});
 }
 
 cocos2d::Scene * TetrisGame::ChooseModeScene::createScene()
 {
-	//auto scene = Scene::create();
-	//auto layer = ChooseModeScene::create();
-	//scene->addChild(layer);
+	creator::CreatorReader* reader = creator::CreatorReader::createWithFilename("creator/scenes/ChooseMode.ccreator");
+	reader->setup();
+	Scene* scene = reader->getSceneGraph();
 
-	return ChooseModeScene::create();
+	btnSurvival = dynamic_cast<ui::Button*>(scene->getChildByName("btnSurvival"));
+	btnPuzzle = dynamic_cast<ui::Button*>(scene->getChildByName("btnPuzzle"));
+	btnTimeRacing = dynamic_cast<ui::Button*>(scene->getChildByName("btnTimeRacing"));
+	btnBack = dynamic_cast<ui::Button*>(scene->getChildByName("btnBack"));
+
+	auto *galaxy_bg = dynamic_cast<Sprite*>(scene->getChildByName("galaxy-bg"));
+
+	// add background scoller to this scene
+	BackgroundScroller bg_scroller(scene, galaxy_bg, 100, 1330, 0);
+	bg_scroller.startScroll();
+
+	// click event
+	handleButtonsClick();
+
+	return scene;
 }
 
 bool TetrisGame::ChooseModeScene::init()
 {
-	if (!Scene::init())
-	{
-		return false;
-	}
-
-	auto visibleSize = Director::getInstance()->getVisibleSize();
-
-	// Mode menu
-	auto puzzleMenuItem = MenuItemFont::create("Puzzle", CC_CALLBACK_1(ChooseModeScene::onClickPuzzleMenuItem, this));
-	auto survivalMenuItem = MenuItemFont::create("Survival", CC_CALLBACK_1(ChooseModeScene::onClickSurvivalMenuItem, this));
-	auto backMenuItem = MenuItemFont::create("Back", CC_CALLBACK_1(ChooseModeScene::onClickBackMenuItem, this));
-
-	puzzleMenuItem->setPosition(Point(visibleSize.width / 2, (visibleSize.height / 10) * 5));
-	survivalMenuItem->setPosition(Point(visibleSize.width / 2, (visibleSize.height / 10) * 4));
-	backMenuItem->setPosition(Point(visibleSize.width / 2, (visibleSize.height / 10) * 2));
-
-	auto menu = Menu::create(puzzleMenuItem, survivalMenuItem, backMenuItem, nullptr);
-	menu->setPosition(Point(0, 0));
-	this->addChild(menu);
-
 	return true;
 }

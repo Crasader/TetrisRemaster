@@ -26,7 +26,7 @@
 //#include "Scenes/HelloWorldScene.h"
 #include "Scenes/StartMenuScene.h"
 
-// #define USE_AUDIO_ENGINE 1
+#define USE_AUDIO_ENGINE 1
 // #define USE_SIMPLE_AUDIO_ENGINE 1
 
 #if USE_AUDIO_ENGINE && USE_SIMPLE_AUDIO_ENGINE
@@ -48,17 +48,18 @@ static cocos2d::Size smallResolutionSize = cocos2d::Size(480, 320);
 static cocos2d::Size mediumResolutionSize = cocos2d::Size(1024, 768);
 static cocos2d::Size largeResolutionSize = cocos2d::Size(2048, 1536);
 
+int AppDelegate::backgroundMusicId = -1;
+
 AppDelegate::AppDelegate()
 {
+
 }
 
 AppDelegate::~AppDelegate() 
 {
-#if USE_AUDIO_ENGINE
-    AudioEngine::end();
-#elif USE_SIMPLE_AUDIO_ENGINE
-    SimpleAudioEngine::end();
-#endif
+	// Calling AudioEngine::end() is not need any more
+	// See here
+	// https://docs.cocos2d-x.org/api-ref/cplusplus/v3x/d0/d75/classcocos2d_1_1experimental_1_1_audio_engine.html#details
 }
 
 // if you want a different context, modify the value of glContextAttrs
@@ -117,6 +118,10 @@ bool AppDelegate::applicationDidFinishLaunching() {
     }
 
     register_all_packages();
+
+	auto BG_THEME_SFX_PATH = "sfx/Time+Lapse+-+Loop.mp3";
+	auto audioId = experimental::AudioEngine::play2d(BG_THEME_SFX_PATH, true, 0.15f);
+	AppDelegate::backgroundMusicId = audioId;
 
     // create a scene. it's an autorelease object
     auto scene = TetrisGame::StartMenuScene::createScene();

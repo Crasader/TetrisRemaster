@@ -160,6 +160,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)\Resources\" /D /E /I /F /Y
     <ClCompile Include="..\Classes\Scenes\StartMenuScene.cpp" />
     <ClCompile Include="..\Classes\SurvivalMode.cpp" />
     <ClCompile Include="..\creator_to_cocos2dx\reader\**\*.cpp" />
+    <ClCompile Include="..\Classes\BackgroundScroller.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -184,6 +185,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)\Resources\" /D /E /I /F /Y
     <ClInclude Include="..\Classes\Scenes\StartMenuScene.h" />
     <ClInclude Include="..\Classes\SurvivalMode.h" />
     <ClInclude Include="..\creator_to_cocos2dx\reader\**\*.h" />
+    <ClInclude Include="..\Classes\BackgroundScroller.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>

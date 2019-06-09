@@ -32,7 +32,7 @@
 							"h": 2690
 						},
 						"enabled": true,
-						"name": "Space-Background-Tiled",
+						"name": "galaxy-bg",
 						"anchorPoint": {
 							"x": 0.5,
 							"y": 0.5
@@ -44,8 +44,8 @@
 						},
 						"opacity": 255,
 						"position": {
-							"x": 517,
-							"y": 1329
+							"x": 507,
+							"y": 1330
 						},
 						"skewX": 0,
 						"skewY": 0,
@@ -53,7 +53,7 @@
 						"colliders": []
 					},
 					"spriteFrameName": "ui/Space-Background-Tiled.png",
-					"spriteType": "Filled",
+					"spriteType": "Simple",
 					"srcBlend": 770,
 					"dstBlend": 771,
 					"trimEnabled": true,
@@ -69,7 +69,7 @@
 						"h": 768
 					},
 					"enabled": true,
-					"name": "Canvas",
+					"name": "canvas",
 					"anchorPoint": {
 						"x": 0.5,
 						"y": 0.5
@@ -184,8 +184,8 @@
 						},
 						"opacity": 255,
 						"position": {
-							"x": 517,
-							"y": 511
+							"x": 521,
+							"y": 471
 						},
 						"rotationSkewX": 0,
 						"rotationSkewY": 0,
@@ -195,7 +195,7 @@
 						"colliders": []
 					},
 					"ignoreContentAdaptWithSize": false,
-					"spriteFrameName": "ui/yellow_button04.png",
+					"spriteFrameName": "ui/blue_button04.png",
 					"transition": 2,
 					"pressedSpriteFrameName": "ui/yellow_button05.png"
 				},
@@ -266,8 +266,8 @@
 						},
 						"opacity": 255,
 						"position": {
-							"x": 517,
-							"y": 407
+							"x": 521,
+							"y": 355
 						},
 						"rotationSkewX": 0,
 						"rotationSkewY": 0,
@@ -279,7 +279,7 @@
 					"ignoreContentAdaptWithSize": false,
 					"spriteFrameName": "ui/blue_button04.png",
 					"transition": 2,
-					"pressedSpriteFrameName": "ui/blue_button05.png"
+					"pressedSpriteFrameName": "ui/yellow_button05.png"
 				},
 				"object_type": "Button",
 				"children": [
@@ -336,170 +336,6 @@
 							"h": 60
 						},
 						"enabled": true,
-						"name": "btnQuit",
-						"anchorPoint": {
-							"x": 0.5,
-							"y": 0.5
-						},
-						"color": {
-							"r": 255,
-							"g": 255,
-							"b": 255
-						},
-						"opacity": 255,
-						"position": {
-							"x": 517,
-							"y": 94
-						},
-						"rotationSkewX": 0,
-						"rotationSkewY": 0,
-						"skewX": 0,
-						"skewY": 0,
-						"groupIndex": 0,
-						"colliders": []
-					},
-					"ignoreContentAdaptWithSize": false,
-					"spriteFrameName": "ui/blue_button04.png",
-					"transition": 2,
-					"pressedSpriteFrameName": "ui/blue_button05.png"
-				},
-				"object_type": "Button",
-				"children": [
-					{
-						"object": {
-							"node": {
-								"contentSize": {
-									"w": 81.48,
-									"h": 40
-								},
-								"enabled": true,
-								"name": "Label",
-								"anchorPoint": {
-									"x": 0.5,
-									"y": 0.5
-								},
-								"color": {
-									"r": 255,
-									"g": 255,
-									"b": 255
-								},
-								"opacity": 255,
-								"position": {
-									"x": 0,
-									"y": 0
-								},
-								"rotationSkewX": 0,
-								"rotationSkewY": 0,
-								"skewX": 0,
-								"skewY": 0,
-								"groupIndex": 0,
-								"colliders": []
-							},
-							"fontSize": 35,
-							"labelText": "Quit",
-							"horizontalAlignment": "Center",
-							"verticalAlignment": "Center",
-							"overflowType": "None",
-							"enableWrap": false,
-							"fontName": "creator/8f38f9d5-fdd2-4d7b-8987-e7e7d58afb12/kenvector_future_thin.ttf",
-							"fontType": "TTF",
-							"lineHeight": 40
-						},
-						"object_type": "Label",
-						"children": []
-					}
-				]
-			},
-			{
-				"object": {
-					"node": {
-						"contentSize": {
-							"w": 240,
-							"h": 60
-						},
-						"enabled": true,
-						"name": "btnHighScore",
-						"anchorPoint": {
-							"x": 0.5,
-							"y": 0.5
-						},
-						"color": {
-							"r": 255,
-							"g": 255,
-							"b": 255
-						},
-						"opacity": 255,
-						"position": {
-							"x": 517,
-							"y": 198
-						},
-						"rotationSkewX": 0,
-						"rotationSkewY": 0,
-						"skewX": 0,
-						"skewY": 0,
-						"groupIndex": 0,
-						"colliders": []
-					},
-					"ignoreContentAdaptWithSize": false,
-					"spriteFrameName": "ui/blue_button04.png",
-					"transition": 2,
-					"pressedSpriteFrameName": "ui/blue_button05.png"
-				},
-				"object_type": "Button",
-				"children": [
-					{
-						"object": {
-							"node": {
-								"contentSize": {
-									"w": 218.34,
-									"h": 40
-								},
-								"enabled": true,
-								"name": "Label",
-								"anchorPoint": {
-									"x": 0.5,
-									"y": 0.5
-								},
-								"color": {
-									"r": 255,
-									"g": 255,
-									"b": 255
-								},
-								"opacity": 255,
-								"position": {
-									"x": 0,
-									"y": 0
-								},
-								"rotationSkewX": 0,
-								"rotationSkewY": 0,
-								"skewX": 0,
-								"skewY": 0,
-								"groupIndex": 0,
-								"colliders": []
-							},
-							"fontSize": 35,
-							"labelText": "High score",
-							"horizontalAlignment": "Center",
-							"verticalAlignment": "Center",
-							"overflowType": "None",
-							"enableWrap": false,
-							"fontName": "creator/8f38f9d5-fdd2-4d7b-8987-e7e7d58afb12/kenvector_future_thin.ttf",
-							"fontType": "TTF",
-							"lineHeight": 40
-						},
-						"object_type": "Label",
-						"children": []
-					}
-				]
-			},
-			{
-				"object": {
-					"node": {
-						"contentSize": {
-							"w": 240,
-							"h": 60
-						},
-						"enabled": true,
 						"name": "btnAbout",
 						"anchorPoint": {
 							"x": 0.5,
@@ -512,8 +348,8 @@
 						},
 						"opacity": 255,
 						"position": {
-							"x": 517,
-							"y": 303
+							"x": 521,
+							"y": 238
 						},
 						"rotationSkewX": 0,
 						"rotationSkewY": 0,
@@ -525,7 +361,7 @@
 					"ignoreContentAdaptWithSize": false,
 					"spriteFrameName": "ui/blue_button04.png",
 					"transition": 2,
-					"pressedSpriteFrameName": "ui/blue_button05.png"
+					"pressedSpriteFrameName": "ui/yellow_button05.png"
 				},
 				"object_type": "Button",
 				"children": [
@@ -573,6 +409,120 @@
 						"children": []
 					}
 				]
+			},
+			{
+				"object": {
+					"node": {
+						"contentSize": {
+							"w": 100,
+							"h": 100
+						},
+						"enabled": true,
+						"name": "btnSetting",
+						"anchorPoint": {
+							"x": 0.5,
+							"y": 0.5
+						},
+						"color": {
+							"r": 255,
+							"g": 255,
+							"b": 255
+						},
+						"opacity": 255,
+						"position": {
+							"x": 63,
+							"y": 65
+						},
+						"rotationSkewX": 0,
+						"rotationSkewY": 0,
+						"skewX": 0,
+						"skewY": 0,
+						"groupIndex": 0,
+						"colliders": []
+					},
+					"ignoreContentAdaptWithSize": false,
+					"spriteFrameName": "ui/wrench.png",
+					"transition": 3,
+					"zoomScale": 1.2
+				},
+				"object_type": "Button",
+				"children": []
+			},
+			{
+				"object": {
+					"node": {
+						"contentSize": {
+							"w": 100,
+							"h": 100
+						},
+						"enabled": true,
+						"name": "btnHighScore",
+						"anchorPoint": {
+							"x": 0.5,
+							"y": 0.5
+						},
+						"color": {
+							"r": 255,
+							"g": 255,
+							"b": 255
+						},
+						"opacity": 255,
+						"position": {
+							"x": 175,
+							"y": 65
+						},
+						"rotationSkewX": 0,
+						"rotationSkewY": 0,
+						"skewX": 0,
+						"skewY": 0,
+						"groupIndex": 0,
+						"colliders": []
+					},
+					"ignoreContentAdaptWithSize": false,
+					"spriteFrameName": "ui/leaderboardsComplex.png",
+					"transition": 3,
+					"zoomScale": 1.2
+				},
+				"object_type": "Button",
+				"children": []
+			},
+			{
+				"object": {
+					"node": {
+						"contentSize": {
+							"w": 100,
+							"h": 100
+						},
+						"enabled": true,
+						"name": "btnQuit",
+						"anchorPoint": {
+							"x": 0.5,
+							"y": 0.5
+						},
+						"color": {
+							"r": 255,
+							"g": 255,
+							"b": 255
+						},
+						"opacity": 255,
+						"position": {
+							"x": 959,
+							"y": 65
+						},
+						"rotationSkewX": 0,
+						"rotationSkewY": 0,
+						"skewX": 0,
+						"skewY": 0,
+						"groupIndex": 0,
+						"colliders": []
+					},
+					"ignoreContentAdaptWithSize": false,
+					"spriteFrameName": "ui/exitRight.png",
+					"transition": 3,
+					"zoomScale": 1.2
+				},
+				"object_type": "Button",
+				"children": []
 			}
 		]
 	},
@@ -609,8 +559,8 @@
 			}
 		},
 		{
-			"name": "ui/yellow_button04.png",
-			"texturePath": "creator/ui/yellow_button04.png",
+			"name": "ui/blue_button04.png",
+			"texturePath": "creator/ui/blue_button04.png",
 			"rect": {
 				"x": 0,
 				"y": 0,
@@ -659,53 +609,78 @@
 			}
 		},
 		{
-			"name": "ui/blue_button04.png",
-			"texturePath": "creator/ui/blue_button04.png",
+			"name": "ui/wrench.png",
+			"texturePath": "creator/ui/wrench.png",
 			"rect": {
-				"x": 0,
-				"y": 0,
-				"w": 190,
-				"h": 49
+				"x": 20,
+				"y": 20,
+				"w": 64,
+				"h": 64
 			},
 			"offset": {
-				"x": 0,
-				"y": 0
+				"x": 2,
+				"y": -2
 			},
 			"rotated": false,
 			"originalSize": {
-				"w": 190,
-				"h": 49
+				"w": 100,
+				"h": 100
 			},
 			"centerRect": {
 				"x": 0,
 				"y": 0,
-				"w": 190,
-				"h": 49
+				"w": 64,
+				"h": 64
 			}
 		},
 		{
-			"name": "ui/blue_button05.png",
-			"texturePath": "creator/ui/blue_button05.png",
+			"name": "ui/leaderboardsComplex.png",
+			"texturePath": "creator/ui/leaderboardsComplex.png",
 			"rect": {
-				"x": 0,
-				"y": 0,
-				"w": 190,
-				"h": 45
+				"x": 18,
+				"y": 26,
+				"w": 68,
+				"h": 56
 			},
 			"offset": {
-				"x": 0,
-				"y": 0
+				"x": 2,
+				"y": -4
 			},
 			"rotated": false,
 			"originalSize": {
-				"w": 190,
-				"h": 45
+				"w": 100,
+				"h": 100
 			},
 			"centerRect": {
 				"x": 0,
 				"y": 0,
-				"w": 190,
-				"h": 45
+				"w": 68,
+				"h": 56
+			}
+		},
+		{
+			"name": "ui/exitRight.png",
+			"texturePath": "creator/ui/exitRight.png",
+			"rect": {
+				"x": 24,
+				"y": 26,
+				"w": 62,
+				"h": 56
+			},
+			"offset": {
+				"x": 5,
+				"y": -4
+			},
+			"rotated": false,
+			"originalSize": {
+				"w": 100,
+				"h": 100
+			},
+			"centerRect": {
+				"x": 0,
+				"y": 0,
+				"w": 62,
+				"h": 56
 			}
 		}
 	],

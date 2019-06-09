@@ -20,6 +20,7 @@ namespace TetrisGame {
 		GameMode *game = nullptr;
 
 		void drawGrid();
+		void addPauseButton();
 	public:
 
 		static cocos2d::Scene* createScene();

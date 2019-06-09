@@ -1,4 +1,5 @@
 #include "GamePlayScene.h"
+#include "PauseMenuScene.h"
 
 USING_NS_CC;
 
@@ -41,6 +42,23 @@ cocos2d::Scene * TetrisGame::GamePlayScene::createScene()
 	return GamePlayScene::create();
 }
 
+void TetrisGame::GamePlayScene::addPauseButton()
+{
+	auto spritePause = Sprite::create("pause.png");
+	spritePause->setPosition(Vec2(824, 640));
+
+	auto touchListener = EventListenerTouchOneByOne::create();
+	touchListener->onTouchBegan = [](Touch* touch, Event* event) -> bool 
+	{
+		auto scene = PauseMenuScene::createScene();
+		Director::getInstance()->pushScene(scene);
+		return true;
+	};
+
+	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListener, spritePause);
+	this->Node::addChild(spritePause, 0);
+}
+
 bool TetrisGame::GamePlayScene::init() {
 	// TODO - implement GamePlayScene::Init
 	if (!Scene::init())
@@ -52,6 +70,9 @@ bool TetrisGame::GamePlayScene::init() {
 
 	// init grid
 	drawGrid();
+
+	// pause button
+	addPauseButton();
 
 	return true;
 }

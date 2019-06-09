@@ -157,6 +157,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)\Resources\" /D /E /I /F /Y
     <ClCompile Include="..\Classes\Scenes\ChooseModeScene.cpp" />
     <ClCompile Include="..\Classes\Scenes\GamePlayScene.cpp" />
     <ClCompile Include="..\Classes\Scenes\HelloWorldScene.cpp" />
+    <ClCompile Include="..\Classes\Scenes\LoseScene.cpp" />
     <ClCompile Include="..\Classes\Scenes\PauseMenuScene.cpp" />
     <ClCompile Include="..\Classes\Scenes\StartMenuScene.cpp" />
     <ClCompile Include="..\Classes\SurvivalMode.cpp" />

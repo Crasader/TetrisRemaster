@@ -6,6 +6,8 @@
 #include "SurvivalMode.h"
 #include "define.h"
 
+USING_NS_CC;
+
 namespace TetrisGame {
 	enum GAME_MODE {
 		PUZZLE = 1,
@@ -18,12 +20,16 @@ namespace TetrisGame {
 		int currentScore;
 		std::vector<int> highScore;
 		GameMode *game = nullptr;
+		Label* txtBest;
+		Label* txtCurrent;
 
 		void drawGrid();
 		void addPauseButton();
 	public:
 
 		static cocos2d::Scene* createScene();
+		void drawPlayAreaBackground();
+		void drawUI();
 		virtual bool init();
 		CREATE_FUNC(GamePlayScene);
 

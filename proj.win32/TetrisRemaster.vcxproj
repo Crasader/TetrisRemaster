@@ -152,6 +152,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)\Resources\" /D /E /I /F /Y
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\Blocks\Block.cpp" />
     <ClCompile Include="..\Classes\Blocks\BlockFactory.cpp" />
+    <ClCompile Include="..\Classes\Blocks\TBlock.cpp" />
     <ClCompile Include="..\Classes\GameMode.cpp" />
     <ClCompile Include="..\Classes\PuzzleMode.cpp" />
     <ClCompile Include="..\Classes\Scenes\ChooseModeScene.cpp" />

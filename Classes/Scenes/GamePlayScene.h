@@ -20,15 +20,16 @@ namespace TetrisGame {
 		int currentScore;
 		std::vector<int> highScore;
 		GameMode *game = nullptr;
-		Label* txtBest;
-		Label* txtCurrent;
-
+		Label* txtBest = nullptr;
+		Label* txtCurrent = nullptr;
+		Node* nextBlockContainer = nullptr;	// use this Node as container to add custom Node inherited from Block: TBlock, OBlock,...
+		Node* playArea = nullptr;	// play area container
 		void drawGrid();
 		void addPauseButton();
 	public:
 
 		static cocos2d::Scene* createScene();
-		void drawPlayAreaBackground();
+		void drawPlayArea();
 		void drawUI();
 		virtual bool init();
 		CREATE_FUNC(GamePlayScene);

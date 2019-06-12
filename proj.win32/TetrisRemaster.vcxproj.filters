@@ -66,6 +66,9 @@
     <ClCompile Include="..\Classes\Scenes\LoseScene.cpp">
       <Filter>src\Scenes</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\Blocks\TBlock.cpp">
+    <Filter>src\Blocks</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">

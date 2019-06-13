@@ -59,6 +59,7 @@ namespace TetrisGame
 	public:
 		Block();
 		Block(COLOR color);
+		void initContentSize();
 		//virtual void virtual_Rotate();
 
 		virtual bool init();

@@ -61,7 +61,7 @@ bool TetrisGame::GamePlayScene::init()
 
 	// Test Custom Node: TBlock
 	auto tBlock = TBlock::create(Block::COLOR::RED);
-	tBlock->setPosition(-69.f, -61.f);
+	tBlock->setAnchorPoint(Vec2(0.5f,0.5f));
 	nextBlockContainer->addChild(tBlock);
 
 

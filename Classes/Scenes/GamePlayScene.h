@@ -24,20 +24,30 @@ namespace TetrisGame {
 		Label* txtCurrent = nullptr;
 		Node* nextBlockContainer = nullptr;	// use this Node as container to add custom Node inherited from Block: TBlock, OBlock,...
 		Node* playArea = nullptr;	// play area container
+		
 		void drawGrid();
 		void addPauseButton();
+		void initGameMode();
+		void drawPlayArea();
+		void drawUI();
 	public:
 
 		static cocos2d::Scene* createScene();
-		void drawPlayArea();
-		void drawUI();
+
 		virtual bool init();
 		CREATE_FUNC(GamePlayScene);
 
 		void handleAction(int PlayerAction_action);
 
-		
 
+		~GamePlayScene()
+		{
+			if (this->game != nullptr)
+			{
+				delete this->game;
+				this->game = nullptr;
+			}
+		}
 		void End();
 
 		void Save();

@@ -20,7 +20,7 @@ void TetrisGame::GamePlayScene::drawGrid()
 		draw->drawLine(
 			Vec2(0, i * BLOCK_SIZE),
 			Vec2(BLOCK_SIZE * MAX_COL, i * BLOCK_SIZE),
-			Color4F(Color3B::WHITE, 0.2)
+			Color4F(Color3B::WHITE, 0.2f)
 		);
 
 		playArea->addChild(draw,-1);
@@ -32,7 +32,7 @@ void TetrisGame::GamePlayScene::drawGrid()
 		draw->drawLine(
 			Vec2(i * BLOCK_SIZE, 0),
 			Vec2(i * BLOCK_SIZE, BLOCK_SIZE * 20),
-			Color4F(Color3B::WHITE, 0.2)
+			Color4F(Color3B::WHITE, 0.2f)
 		);
 
 		playArea->addChild(draw, - 1);
@@ -44,9 +44,17 @@ cocos2d::Scene* TetrisGame::GamePlayScene::createScene()
 	return GamePlayScene::create();
 }
 
+void TetrisGame::GamePlayScene::initGameMode()
+{
+	auto nextBlock = this->game->getNextBlock();
+	nextBlockContainer->addChild(nextBlock);
+
+	auto currentBlock = this->game->getCurrentBlock();
+	playArea->addChild(currentBlock);
+}
+
 bool TetrisGame::GamePlayScene::init()
 {
-	// TODO - implement GamePlayScene::Init
 	if (!Scene::init())
 	{
 		return false;
@@ -54,20 +62,9 @@ bool TetrisGame::GamePlayScene::init()
 
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 
-
 	drawPlayArea();
 
 	drawUI();
-
-	// Test Custom Node: TBlock
-	auto tBlock = TBlock::create(Block::COLOR::RED);
-	tBlock->setAnchorPoint(Vec2(0.5f,0.5f));
-	nextBlockContainer->addChild(tBlock);
-
-
-	// another test: default 0,0 position on playArea
-	auto tBlock2 = TBlock::create(Block::COLOR::GREEN);
-	playArea->addChild(tBlock2);
 
 	return true;
 }
@@ -86,7 +83,6 @@ void TetrisGame::GamePlayScene::Save()
 
 void TetrisGame::GamePlayScene::setMode(GAME_MODE gameMode)
 {
-	// TODO - implement GamePlayScene::setMode
 	switch (gameMode)
 	{
 	case GAME_MODE::PUZZLE:
@@ -99,6 +95,7 @@ void TetrisGame::GamePlayScene::setMode(GAME_MODE gameMode)
 
 	default: ;
 	}
+	initGameMode();
 }
 
 void TetrisGame::GamePlayScene::Update()
@@ -189,7 +186,7 @@ void TetrisGame::GamePlayScene::addPauseButton()
 	auto kenney_font_path = "fonts/Kenney Future.ttf";
 
 	auto pauseButton = ui::Button::create();
-	pauseButton->setZoomScale(0.15);
+	pauseButton->setZoomScale(0.15f);
 	pauseButton->setPressedActionEnabled(true);
 	pauseButton->setPosition(Vec2(807, 635));
 	pauseButton->setTitleText("Pause");

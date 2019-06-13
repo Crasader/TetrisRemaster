@@ -11,6 +11,11 @@ void TetrisGame::ChooseModeScene::handleButtonsClick()
 	btnSurvival->addClickEventListener([=](Ref*)
 	{
 		experimental::AudioEngine::play2d(menuClick_SFX_Path);
+		auto scene = GamePlayScene::create();
+		scene->setMode(GAME_MODE::SURVIVAL);
+
+		Director::getInstance()->popScene();
+		Director::getInstance()->replaceScene(scene);
 	});
 
 	btnPuzzle->addClickEventListener([=](Ref*)

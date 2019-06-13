@@ -3,22 +3,33 @@
 #include <vector>
 #include <bitset>
 #include "cocos2d.h"
+#include "Blocks/Block.h"
 
 namespace TetrisGame {
 	class GameMode {
 
 	protected:
-		int speed;
+		float speed;	// speed here is t in formula v = s / t
 		std::vector<std::vector<char>> board;
+		Block* currentBlock;
+
+		Block* getRandomBlock();
 
 	public:
+
+		void setSpeed(float speed);
+
 		virtual bool isWin() = 0;
 				
 		virtual bool isLose() = 0;
 				
 		virtual bool virtual_computeScore() = 0;
 
-		void getSpeed();
+		Block* getCurrentBlock();
+		
+		GameMode();
+
+		float getSpeed();
 
 		cocos2d::Vec2 getBlockShadowPos();
 
@@ -30,7 +41,7 @@ namespace TetrisGame {
 
 		void rotateBlock();
 
-		void getNextBlock();
+		Block* getNextBlock();
 	};
 }
 

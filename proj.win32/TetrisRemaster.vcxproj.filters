@@ -67,7 +67,7 @@
       <Filter>src\Scenes</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Blocks\TBlock.cpp">
-    <Filter>src\Blocks</Filter>
+      <Filter>src\Blocks</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -81,9 +81,6 @@
       <Filter>src\Blocks</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Blocks\BlockFactory.h">
-      <Filter>src\Blocks</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Blocks\BlockType.h">
       <Filter>src\Blocks</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Blocks\IBlock.h">

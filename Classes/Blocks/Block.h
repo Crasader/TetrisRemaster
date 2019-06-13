@@ -32,6 +32,13 @@ namespace TetrisGame
 			YELLOW
 		};
 
+		enum BlockType {
+			TBlock,
+			LBlock,
+			ZBlock,
+			OBlock,
+			IBlock
+		};
 
 	private:
 		std::map<COLOR, const char *> color_map = {

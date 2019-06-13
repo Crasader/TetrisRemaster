@@ -26,7 +26,8 @@ namespace TetrisGame {
 		virtual bool virtual_computeScore() = 0;
 
 		Block* getCurrentBlock();
-		
+		void moveBlockDown();
+
 		GameMode();
 
 		float getSpeed();

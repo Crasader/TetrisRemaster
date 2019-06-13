@@ -26,10 +26,29 @@ TetrisGame::Block* TetrisGame::GameMode::getCurrentBlock()
 	return currentBlock;
 }
 
+void TetrisGame::GameMode::moveBlockDown()
+{
+	auto pos = currentBlock->getPosition();
+	currentBlock->setPosition(pos.x, pos.y - BLOCK_SIZE);
+}
+
 TetrisGame::GameMode::GameMode()
 {
-	speed = 1;
+	speed = 1.5;
 	this->currentBlock = this->getRandomBlock();
+
+	// init random position for block
+	//
+	//     position here
+	// | - - - - - - - - - - - |
+	// |		Play area	   |
+	// |					   |
+
+	auto pos = Vec2::ZERO;
+	pos.x = cocos2d::random(0, MAX_COL) * BLOCK_SIZE;
+	pos.y = MAX_ROW * BLOCK_SIZE;
+	
+	this->currentBlock->setPosition(pos);
 }
 
 float TetrisGame::GameMode::getSpeed()

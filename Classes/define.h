@@ -23,7 +23,7 @@ namespace TetrisGame {
 	const int BLOCK_SIZE = 48;
 
 	const int MAX_COL = 12;
-	const int MAX_ROW = 25;
+	const int MAX_ROW = 16;
 
 	const int PADDING_LEFT = BLOCK_SIZE;
 }

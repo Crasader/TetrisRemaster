@@ -1,14 +1,8 @@
 #include "GamePlayScene.h"
 #include "PauseMenuScene.h"
 #include "Blocks/Block.h"
-#include "Blocks/TBlock.h"
 
 
-void TetrisGame::GamePlayScene::handleAction(int PlayerAction_action)
-{
-	// TODO - implement GamePlayScene::handleAction
-	throw "Not yet implemented";
-}
 
 void TetrisGame::GamePlayScene::drawGrid()
 {
@@ -66,6 +60,10 @@ bool TetrisGame::GamePlayScene::init()
 
 	drawUI();
 
+	auto listener = EventListenerKeyboard::create();
+	listener->onKeyPressed = CC_CALLBACK_2(GamePlayScene::onKeyPressed, this);
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
+	
 	return true;
 }
 
@@ -96,6 +94,7 @@ void TetrisGame::GamePlayScene::setMode(GAME_MODE gameMode)
 	default: ;
 	}
 	initGameMode();
+	this->scheduleUpdate();
 }
 
 void TetrisGame::GamePlayScene::Update()
@@ -106,6 +105,13 @@ void TetrisGame::GamePlayScene::Update()
 
 void TetrisGame::GamePlayScene::update(float delta)
 {
+	static float count_second = 0;
+	count_second += delta;
+	if (count_second >= this->game->getSpeed())
+	{
+		this->game->moveBlockDown();
+		count_second = 0;
+	}
 }
 
 void TetrisGame::GamePlayScene::drawPlayArea()
@@ -178,6 +184,19 @@ void TetrisGame::GamePlayScene::drawUI()
 	auto galaxy_bg = Sprite::create("creator/ui/Space-Background-Tiled.png");
 	galaxy_bg->setPosition(Vec2(507, 1330));
 	this->addChild(galaxy_bg, -1); // Tree In-order travel, <0 is left tree, >=0 is right tree 
+}
+
+void TetrisGame::GamePlayScene::onKeyPressed(EventKeyboard::KeyCode keycode, Event * e)
+{
+	if (keycode == key[MoveLeft])
+	{
+		this->game->moveBlockByLeft();
+	}
+	else if (keycode == key[MoveRight])
+	{
+		this->game->moveBlockByRight();
+	}
+
 }
 
 void TetrisGame::GamePlayScene::addPauseButton()

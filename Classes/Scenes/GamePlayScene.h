@@ -5,6 +5,7 @@
 #include "PuzzleMode.h"
 #include "SurvivalMode.h"
 #include "define.h"
+#include "PlayerAction.h"
 
 USING_NS_CC;
 
@@ -15,6 +16,13 @@ namespace TetrisGame {
 	};
 
 	class GamePlayScene : public cocos2d::Scene {
+	public:
+		std::map<PlayerAction, EventKeyboard::KeyCode> key = {
+			{PlayerAction::MoveLeft, EventKeyboard::KeyCode::KEY_A},
+			{PlayerAction::MoveRight, EventKeyboard::KeyCode::KEY_D},
+			{PlayerAction::HardFall, EventKeyboard::KeyCode::KEY_W},
+			{PlayerAction::Rotate90, EventKeyboard::KeyCode::KEY_R},
+		};
 
 	private:
 		int currentScore;
@@ -30,14 +38,13 @@ namespace TetrisGame {
 		void initGameMode();
 		void drawPlayArea();
 		void drawUI();
-	public:
 
+		void onKeyPressed(EventKeyboard::KeyCode keycode, Event* e);
+	public:
 		static cocos2d::Scene* createScene();
 
 		virtual bool init();
 		CREATE_FUNC(GamePlayScene);
-
-		void handleAction(int PlayerAction_action);
 
 
 		~GamePlayScene()

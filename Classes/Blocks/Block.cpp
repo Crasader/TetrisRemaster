@@ -2,15 +2,19 @@
 
 void TetrisGame::Block::loadShapeData(std::string filePath)
 {
-	std::ifstream ifs(filePath);
+	std::string data;
+	std::stringstream ss;
+
+	data = FileUtils::getInstance()->getStringFromFile(filePath);
+	ss << data;
+
 	for (int i = 0; i < 4; i++)
 	{
 		for (int j = 0; j < 4; j++)
 		{
-			ifs >> shape[i][j];
+			ss >> shape[i][j];
 		}
 	}
-	ifs.close();
 }
 
 TetrisGame::Block::Block()

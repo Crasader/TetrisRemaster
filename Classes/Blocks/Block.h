@@ -1,10 +1,8 @@
 #ifndef BLOCK_H
 #define BLOCK_H
 #include <vector>
-#include <bitset>
 #include "cocos2d.h"
 #include "define.h"
-#include "fstream"
 #include "string"
 
 USING_NS_CC;

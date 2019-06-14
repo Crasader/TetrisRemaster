@@ -11,12 +11,10 @@ namespace TetrisGame {
 		ZBlock(){}
 		ZBlock(COLOR color):Block(color){}
 
-		bool init() override
-		{
-			Block::loadShapeData("block_map/Z.txt");
-			return Block::init();
-		}
+		bool init() override;
 		CREATE_FUNC_BLOCK(ZBlock);
+
+		Block* clone() const override;
 	};
 }
 

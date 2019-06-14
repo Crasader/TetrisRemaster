@@ -20,6 +20,8 @@ namespace TetrisGame {
 
 		bool init() override;
 		CREATE_FUNC_BLOCK(TBlock);
+
+		Block* clone() const override;
 	};
 }
 

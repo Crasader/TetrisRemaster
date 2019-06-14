@@ -11,12 +11,11 @@ namespace TetrisGame {
 
 		IBlock(COLOR color): Block(color){}
 
-		bool init() override
-		{
-			Block::loadShapeData("block_map/I.txt");
-			return Block::init();
-		}
+		bool init() override;
+
 		CREATE_FUNC_BLOCK(IBlock);
+
+		Block* clone() const override;
 	};
 }
 

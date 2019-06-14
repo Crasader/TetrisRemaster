@@ -17,7 +17,7 @@ void TetrisGame::GamePlayScene::drawGrid()
 			Color4F(Color3B::WHITE, 0.2f)
 		);
 
-		playArea->addChild(draw,-1);
+		playArea->addChild(draw, -1);
 	}
 
 	for (int i = 0; i <= MAX_COL; i++)
@@ -112,7 +112,12 @@ void TetrisGame::GamePlayScene::update(float delta)
 		if (this->game->canMoveDown())
 		{
 			this->game->moveBlockDown();
-			
+		}
+		else
+		{
+			game->updateCurrentBlock();
+			nextBlockContainer->addChild(game->getNextBlock());
+			playArea->addChild(game->getCurrentBlock());
 		}
 		count_second = 0;
 	}
@@ -122,10 +127,10 @@ void TetrisGame::GamePlayScene::drawPlayArea()
 {
 	// init playArea container node
 	playArea = Node::create();
-	playArea->setAnchorPoint(Vec2(0.f,0.f));
+	playArea->setAnchorPoint(Vec2(0.f, 0.f));
 	playArea->setPosition(Vec2(PADDING_LEFT, 0));
 	playArea->setContentSize(Size(BLOCK_SIZE * MAX_COL, 768));
-	
+
 	// playArea background sprite
 	auto bg_white = Sprite::create("white.png");
 	bg_white->setAnchorPoint(Vec2(0, 0));
@@ -190,7 +195,7 @@ void TetrisGame::GamePlayScene::drawUI()
 	this->addChild(galaxy_bg, -1); // Tree In-order travel, <0 is left tree, >=0 is right tree 
 }
 
-void TetrisGame::GamePlayScene::onKeyPressed(EventKeyboard::KeyCode keycode, Event * e)
+void TetrisGame::GamePlayScene::onKeyPressed(EventKeyboard::KeyCode keycode, Event* e)
 {
 	if (keycode == key[MoveLeft])
 	{

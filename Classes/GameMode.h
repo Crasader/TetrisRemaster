@@ -16,7 +16,11 @@ namespace TetrisGame {
 		(MAX_ROW, std::vector<Sprite*>(MAX_COL, nullptr));
 		
 		Block* currentBlock;
+
+		Block* nextBlock;
+
 		
+	protected:
 		Block* getRandomBlock();
 
 		const int LEFT_WALL = -1;
@@ -46,8 +50,9 @@ namespace TetrisGame {
 				
 		virtual bool virtual_computeScore() = 0;
 
-		Block* getCurrentBlock();
+		
 		void moveBlockDown();
+
 
 		GameMode();
 
@@ -63,7 +68,13 @@ namespace TetrisGame {
 
 		void rotateBlock();
 
+		Block* getCurrentBlock();
 		Block* getNextBlock();
+
+		void initCurrentBlock();
+		void initNextBlock();
+
+		void updateCurrentBlock();
 	};
 }
 

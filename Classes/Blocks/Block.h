@@ -80,6 +80,11 @@ namespace TetrisGame
 		void softFalling();
 
 		void hardFalling();
+
+		virtual Block* clone() const
+		{
+			return nullptr;
+		}
 	};
 }
 

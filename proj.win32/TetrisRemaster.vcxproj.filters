@@ -24,9 +24,6 @@
     <ClCompile Include="main.cpp">
       <Filter>win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\creator_to_cocos2dx\reader\**\*.cpp">
-      <Filter>reader</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\Blocks\Block.cpp">
       <Filter>src\Blocks</Filter>
     </ClCompile>
@@ -69,13 +66,124 @@
     <ClCompile Include="..\Classes\Blocks\TBlock.cpp">
       <Filter>src\Blocks</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\Blocks\IBlock.cpp">
+      <Filter>src\Blocks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Blocks\LBlock.cpp">
+      <Filter>src\Blocks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Blocks\OBlock.cpp">
+      <Filter>src\Blocks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Blocks\ZBlock.cpp">
+      <Filter>src\Blocks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\CreatorReader.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\animation\AnimateClip.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\animation\AnimationClip.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\animation\AnimationManager.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\animation\Bezier.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\animation\Easing.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\collider\Collider.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\collider\ColliderManager.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\collider\Contract.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\collider\Intersection.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\dragonbones\animation\Animation.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\dragonbones\animation\AnimationState.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\dragonbones\animation\TimelineState.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\dragonbones\animation\WorldClock.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\ui\PageView.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\ui\RichtextStringVisitor.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\dragonbones\armature\Armature.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\dragonbones\armature\Bone.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\dragonbones\armature\Slot.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\dragonbones\cocos2dx\CCArmatureDisplay.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\dragonbones\cocos2dx\CCFactory.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\dragonbones\cocos2dx\CCSlot.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\dragonbones\cocos2dx\CCTextureData.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\dragonbones\core\BaseObject.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\dragonbones\events\EventObject.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\dragonbones\factories\BaseFactory.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\dragonbones\model\AnimationData.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\dragonbones\model\ArmatureData.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\dragonbones\model\DragonBonesData.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\dragonbones\model\FrameData.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\dragonbones\model\TimelineData.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\dragonbones\parsers\DataParser.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\dragonbones\parsers\JSONDataParser.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\creator_to_cocos2dx\reader\dragonbones\textures\TextureData.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
       <Filter>win32</Filter>
-    </ClInclude>
-    <ClInclude Include="..\creator_to_cocos2dx\reader\**\*.h">
-      <Filter>reader</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Blocks\Block.h">
       <Filter>src\Blocks</Filter>
@@ -136,6 +244,177 @@
     </ClInclude>
     <ClInclude Include="..\Classes\BackgroundScroller.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\CreatorReader.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\CreatorReader_generated.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\Macros.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\animation\AnimateClip.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\animation\AnimationClip.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\animation\AnimationClipProperties.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\animation\AnimationManager.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\animation\Bezier.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\animation\Easing.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\collider\Collider.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\collider\ColliderManager.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\collider\Contract.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\collider\Intersection.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\DragonBonesHeaders.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\animation\Animation.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\animation\AnimationState.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\animation\BaseTimelineState.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\animation\IAnimateble.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\animation\TimelineState.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\animation\WorldClock.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\flatbuffers\code_generators.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\flatbuffers\flatbuffers.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\flatbuffers\grpc.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\flatbuffers\hash.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\flatbuffers\idl.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\flatbuffers\reflection.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\flatbuffers\reflection_generated.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\flatbuffers\util.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\ui\PageView.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\ui\RichtextStringVisitor.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\armature\Armature.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\armature\Bone.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\armature\IArmatureDisplay.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\armature\Slot.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\armature\TransformObject.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\cocos2dx\CCArmatureDisplay.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\cocos2dx\CCDragonBonesHeaders.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\cocos2dx\CCFactory.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\cocos2dx\CCSlot.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\cocos2dx\CCTextureData.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\core\BaseObject.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\core\DragonBones.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\events\EventObject.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\factories\BaseFactory.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\geom\ColorTransform.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\geom\Matrix.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\geom\Point.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\geom\Rectangle.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\geom\Transform.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\model\AnimationData.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\model\ArmatureData.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\model\DragonBonesData.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\model\FrameData.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\model\TimelineData.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\parsers\DataParser.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\parsers\JSONDataParser.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\textures\TextureData.h">
+      <Filter>reader</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -163,19 +163,15 @@ void TetrisGame::GameMode::moveBlockDown()
 	logCurrentBlockPosition();
 }
 
-TetrisGame::GameMode::GameMode()
+// init random position for block
+//
+//     position here
+// | - - - - - - - - - - - |
+// |		Play area	   |
+// |					   |
+
+void TetrisGame::GameMode::initCurrentBlock()
 {
-	speed = 1;
-	this->currentBlock = this->getRandomBlock();
-
-
-	// init random position for block
-	//
-	//     position here
-	// | - - - - - - - - - - - |
-	// |		Play area	   |
-	// |					   |
-
 	auto pos = Vec2::ZERO;
 	auto height = currentBlock->getContentSize().height;
 	pos.x = cocos2d::random(0, MAX_COL) * BLOCK_SIZE;
@@ -190,6 +186,18 @@ TetrisGame::GameMode::GameMode()
 		MAX_COL * BLOCK_SIZE - blockWidth);
 
 	this->currentBlock->setPosition(pos);
+	this->currentBlock->setAnchorPoint(Vec2::ZERO);
+}
+
+TetrisGame::GameMode::GameMode()
+{
+	srand(time(NULL));
+	speed = 1;
+	this->currentBlock = this->getRandomBlock();
+
+	initCurrentBlock();
+
+	initNextBlock();
 }
 
 float TetrisGame::GameMode::getSpeed()
@@ -232,7 +240,21 @@ void TetrisGame::GameMode::rotateBlock()
 
 TetrisGame::Block* TetrisGame::GameMode::getNextBlock()
 {
-	auto block = this->getRandomBlock();
-	block->setAnchorPoint(Vec2(0.5f, 0.5f));
-	return block;
+	return nextBlock;
+}
+
+void TetrisGame::GameMode::initNextBlock()
+{
+	nextBlock = getRandomBlock();
+	nextBlock->setAnchorPoint(Vec2(0.5f,0.5f));
+}
+
+void TetrisGame::GameMode::updateCurrentBlock()
+{
+	currentBlock->removeFromParent();
+	currentBlock = nextBlock->clone();
+	initCurrentBlock();
+
+	nextBlock->removeFromParent();
+	initNextBlock();
 }

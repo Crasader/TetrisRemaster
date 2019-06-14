@@ -10,12 +10,33 @@ namespace TetrisGame {
 
 	protected:
 		float speed;	// speed here is t in formula v = s / t
-		std::vector<std::vector<char>> board;
-		Block* currentBlock;
 
+		std::vector<std::vector<Sprite*>> board =
+			std::vector<std::vector<Sprite*>>
+		(MAX_ROW, std::vector<Sprite*>(MAX_COL, nullptr));
+		
+		Block* currentBlock;
+		
 		Block* getRandomBlock();
 
+		const int LEFT_WALL = -1;
+
+		const int RIGHT_WALL = MAX_COL;
+
+		const int FLOOR = MAX_ROW;
+
 	public:
+		void logCurrentBlockPosition();
+
+		bool canMoveLeft();
+
+		bool canMoveRight();
+
+		bool canMoveDown();
+
+		bool isMoveable();
+
+		void clearRow(int index);
 
 		void setSpeed(float speed);
 

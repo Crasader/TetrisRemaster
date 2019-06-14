@@ -9,7 +9,7 @@ USING_NS_CC;
 
 namespace TetrisGame
 {
-	
+
 	class Block : public Node
 	{
 		// Inherited from Cocos Node class
@@ -30,7 +30,8 @@ namespace TetrisGame
 			YELLOW
 		};
 
-		enum BlockType {
+		enum BlockType
+		{
 			TBlock,
 			LBlock,
 			ZBlock,
@@ -57,14 +58,21 @@ namespace TetrisGame
 		std::vector<std::vector<short>> shape =
 			std::vector<std::vector<short>>(4, std::vector<short>(4, 0));
 
+	public:
+		std::vector<std::vector<short>> getShape();
+	protected:
 		std::vector<std::vector<std::vector<char>>> rotateShapes;
 		cocos2d::Vec2 bottomLeftPos;
 
 		void loadShapeData(std::string filePath);
+		void initContentSize();
 	public:
 		Block();
 		Block(COLOR color);
-		void initContentSize();
+
+		std::vector<int> getLeftMostCols();
+		std::vector<int> getRightMostCols();
+		std::vector<int> getLowestRows();
 		//virtual void virtual_Rotate();
 
 		virtual bool init();

@@ -1,5 +1,10 @@
 #include "Block.h"
 
+std::vector<std::vector<short>> TetrisGame::Block::getShape()
+{
+	return shape;
+}
+
 void TetrisGame::Block::loadShapeData(std::string filePath)
 {
 	std::string data;
@@ -25,6 +30,54 @@ TetrisGame::Block::Block(COLOR color)
 {
 	this->color = color;
 	Node();
+}
+
+std::vector<int> TetrisGame::Block::getLeftMostCols()
+{
+	std::vector<int> leftMostCols;
+	for (int i = 0; i < shape.size(); i++)
+	{
+		int j = 0;
+		
+		while (j < shape[i].size() && shape[i][j] != 1) { j++; }
+
+		if (j < shape[i].size())
+		{
+			leftMostCols.push_back(j);
+		}
+	}
+	return leftMostCols;
+}
+
+std::vector<int> TetrisGame::Block::getRightMostCols()
+{
+	std::vector<int> rightMostCols;
+	for (int i = 0; i < shape.size(); i++)
+	{
+		int j = shape.size() - 1;
+
+		while (j >= 0 && shape[i][j] != 1) { j--; }
+		if (j >= 0)
+		{
+			rightMostCols.push_back(j);
+		}
+	}
+	return rightMostCols;
+}
+
+std::vector<int> TetrisGame::Block::getLowestRows()
+{
+	std::vector<int> lowestRows;
+	for (int j = 0; j < shape[0].size(); j++)
+	{
+		int i = shape.size() - 1;
+		while (i >= 0 && shape[i][j] != 1) { i--; }
+		if (i >= 0)
+		{
+			lowestRows.push_back(i);
+		}
+	}
+	return lowestRows;
 }
 
 void TetrisGame::Block::initContentSize()

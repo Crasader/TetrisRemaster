@@ -20,7 +20,7 @@ namespace TetrisGame {
 		std::map<PlayerAction, EventKeyboard::KeyCode> key = {
 			{PlayerAction::MoveLeft, EventKeyboard::KeyCode::KEY_A},
 			{PlayerAction::MoveRight, EventKeyboard::KeyCode::KEY_D},
-			{PlayerAction::HardFall, EventKeyboard::KeyCode::KEY_W},
+			{PlayerAction::HardFall, EventKeyboard::KeyCode::KEY_S},
 			{PlayerAction::Rotate90, EventKeyboard::KeyCode::KEY_R},
 		};
 

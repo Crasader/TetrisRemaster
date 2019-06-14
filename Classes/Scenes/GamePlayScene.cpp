@@ -63,7 +63,7 @@ bool TetrisGame::GamePlayScene::init()
 	auto listener = EventListenerKeyboard::create();
 	listener->onKeyPressed = CC_CALLBACK_2(GamePlayScene::onKeyPressed, this);
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
-	
+
 	return true;
 }
 
@@ -109,7 +109,11 @@ void TetrisGame::GamePlayScene::update(float delta)
 	count_second += delta;
 	if (count_second >= this->game->getSpeed())
 	{
-		this->game->moveBlockDown();
+		if (this->game->canMoveDown())
+		{
+			this->game->moveBlockDown();
+			
+		}
 		count_second = 0;
 	}
 }
@@ -190,13 +194,18 @@ void TetrisGame::GamePlayScene::onKeyPressed(EventKeyboard::KeyCode keycode, Eve
 {
 	if (keycode == key[MoveLeft])
 	{
-		this->game->moveBlockByLeft();
+		if (this->game->canMoveLeft())
+		{
+			this->game->moveBlockByLeft();
+		}
 	}
 	else if (keycode == key[MoveRight])
 	{
-		this->game->moveBlockByRight();
+		if (this->game->canMoveRight())
+		{
+			this->game->moveBlockByRight();
+		}
 	}
-
 }
 
 void TetrisGame::GamePlayScene::addPauseButton()

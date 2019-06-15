@@ -1,5 +1,10 @@
 #include "Block.h"
 
+std::vector<std::vector<Sprite*>> TetrisGame::Block::getUnitBlocks() const
+{
+	return unitBlocks;
+}
+
 std::vector<std::vector<short>> TetrisGame::Block::getShape()
 {
 	return shape;
@@ -137,6 +142,7 @@ bool TetrisGame::Block::init()
 					BLOCK_SIZE * (shape.size() - 1 - row));
 
 				block->setAnchorPoint(Vec2(0.f, 0.f));
+				unitBlocks[row][col] = block;
 			}
 		}
 	}

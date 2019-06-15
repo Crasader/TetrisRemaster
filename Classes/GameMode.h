@@ -23,6 +23,8 @@ namespace TetrisGame {
 	protected:
 		Block* getRandomBlock();
 
+		void drawCurrentBlockToBoard(Node* playArea);
+
 		const int LEFT_WALL = -1;
 
 		const int RIGHT_WALL = MAX_COL;
@@ -74,7 +76,7 @@ namespace TetrisGame {
 		void initCurrentBlock();
 		void initNextBlock();
 
-		void updateCurrentBlock();
+		void updateCurrentBlock(Node* playArea);
 	};
 }
 

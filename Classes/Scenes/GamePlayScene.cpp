@@ -115,7 +115,7 @@ void TetrisGame::GamePlayScene::update(float delta)
 		}
 		else
 		{
-			game->updateCurrentBlock();
+			game->updateCurrentBlock(playArea);
 			nextBlockContainer->addChild(game->getNextBlock());
 			playArea->addChild(game->getCurrentBlock());
 		}

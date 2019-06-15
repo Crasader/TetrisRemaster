@@ -16,6 +16,33 @@ TetrisGame::Block* TetrisGame::GameMode::getRandomBlock()
 	return BlockFactory::getBlock(type, color);
 }
 
+void TetrisGame::GameMode::drawCurrentBlockToBoard(Node* playArea)
+{
+	auto unitBlocks = currentBlock->clone()->getUnitBlocks();
+	int height = currentBlock->getContentSize().height;
+	auto pos = currentBlock->getPosition();
+	
+	int rowBegin = unitBlocks.size() - height / BLOCK_SIZE;
+
+	int boardCol = pos.x / BLOCK_SIZE;
+	int boardRow = MAX_ROW - pos.y / BLOCK_SIZE - height / BLOCK_SIZE;
+
+	for (int i = rowBegin; i < unitBlocks.size(); i++)
+	{
+
+		for (int j = 0; j < unitBlocks[i].size(); j++)
+		{
+			if (unitBlocks[i][j] != nullptr)
+			{
+				board[boardRow + i - rowBegin][boardCol + j] = unitBlocks[i][j];
+				unitBlocks[i][j]->setPosition(pos + unitBlocks[i][j]->getPosition());
+				unitBlocks[i][j]->removeFromParent();
+				playArea->addChild(unitBlocks[i][j]);
+			}
+		}
+	}
+}
+
 void TetrisGame::GameMode::logCurrentBlockPosition()
 {
 	
@@ -249,8 +276,10 @@ void TetrisGame::GameMode::initNextBlock()
 	nextBlock->setAnchorPoint(Vec2(0.5f,0.5f));
 }
 
-void TetrisGame::GameMode::updateCurrentBlock()
+void TetrisGame::GameMode::updateCurrentBlock(Node* playArea)
 {
+	drawCurrentBlockToBoard(playArea);
+
 	currentBlock->removeFromParent();
 	currentBlock = nextBlock->clone();
 	initCurrentBlock();

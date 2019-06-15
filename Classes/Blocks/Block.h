@@ -58,7 +58,10 @@ namespace TetrisGame
 		std::vector<std::vector<short>> shape =
 			std::vector<std::vector<short>>(4, std::vector<short>(4, 0));
 
+		std::vector<std::vector<Sprite*>> unitBlocks =
+			std::vector<std::vector<Sprite*>>(4, std::vector<Sprite*>(4,nullptr));
 	public:
+		std::vector<std::vector<Sprite*>> getUnitBlocks() const;
 		std::vector<std::vector<short>> getShape();
 	protected:
 		std::vector<std::vector<std::vector<char>>> rotateShapes;

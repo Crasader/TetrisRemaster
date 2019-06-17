@@ -1,0 +1,16 @@
+<GameState>
+    <Mode name="Survival Mode" speed="3">
+        <Board width="12" height="15" map="board.txt"></Board>
+        <Block color="fff" name="currentBlock">
+            <Shape width="2" height="3" map="L.txt"></Shape>
+            <!-- anchor at bottom left corner -->
+            <Position x="5" y="7"></Position>
+        </Block>
+		<Block color="aaa" name="nextBlock">
+            <Shape width="3" height="2" map="T.txt"></Shape>
+        </Block>
+		<Time>05:59</Time>
+        <BlockUsed>0<BlockUsed>
+    </Mode>
+    <CurrentScore>135</CurrentScore>
+</GameState>

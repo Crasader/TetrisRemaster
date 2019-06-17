@@ -1,0 +1,20 @@
+<HighScore>
+    <Player>
+        <Name>Ninh</Name>
+        <Score>50</Score>
+		<Time>05:29</Time>
+        <Date>17/05/2019</Date>
+    </Player>
+    <Player>
+        <Name>Phú</Name>
+        <Score>100</Score>
+		<Time>05:25</Time>
+        <Date>17/05/2019</Date>
+    </Player>
+    <Player>
+        <Name>Thanos</Name>
+        <Score>58</Score>
+		<Time>04:59</Time>
+        <Date>17/06/2019</Date>
+    </Player>
+</HighScore>

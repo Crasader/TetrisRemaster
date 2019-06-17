@@ -5,3 +5,6 @@
 [submodule "creator_to_cocos2dx"]
 	path = creator_to_cocos2dx
 	url = https://github.com/kim-ninh/creator_to_cocos2dx
+[submodule "tinyxml2"]
+	path = tinyxml2
+	url = https://github.com/leethomason/tinyxml2.git

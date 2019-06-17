@@ -201,6 +201,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)\Resources\" /D /E /I /F /Y
     <ClCompile Include="..\creator_to_cocos2dx\reader\dragonbones\textures\TextureData.cpp" />
     <ClCompile Include="..\creator_to_cocos2dx\reader\ui\PageView.cpp" />
     <ClCompile Include="..\creator_to_cocos2dx\reader\ui\RichtextStringVisitor.cpp" />
+    <ClCompile Include="..\tinyxml2\tinyxml2.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -281,6 +282,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)\Resources\" /D /E /I /F /Y
     <ClInclude Include="..\creator_to_cocos2dx\reader\Macros.h" />
     <ClInclude Include="..\creator_to_cocos2dx\reader\ui\PageView.h" />
     <ClInclude Include="..\creator_to_cocos2dx\reader\ui\RichtextStringVisitor.h" />
+    <ClInclude Include="..\tinyxml2\tinyxml2.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>

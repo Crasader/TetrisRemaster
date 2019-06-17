@@ -4,6 +4,7 @@
 #include <bitset>
 #include "cocos2d.h"
 #include "Blocks/Block.h"
+#include "tinyxml2/tinyxml2.h"
 
 namespace TetrisGame {
 	class GameMode {
@@ -77,6 +78,8 @@ namespace TetrisGame {
 		void initNextBlock();
 
 		void updateCurrentBlock(Node* playArea);
+
+		void Save();
 	};
 }
 

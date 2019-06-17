@@ -19,6 +19,9 @@
     <Filter Include="src\Blocks">
       <UniqueIdentifier>{09e6ab5a-5050-4f79-a357-65c4e877aced}</UniqueIdentifier>
     </Filter>
+    <Filter Include="tinyxml2">
+      <UniqueIdentifier>{9b7e9b5b-eb43-4716-af0b-2eb044219786}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -179,6 +182,9 @@
     </ClCompile>
     <ClCompile Include="..\creator_to_cocos2dx\reader\dragonbones\textures\TextureData.cpp">
       <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tinyxml2\tinyxml2.cpp">
+      <Filter>tinyxml2</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -415,6 +421,9 @@
     </ClInclude>
     <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\textures\TextureData.h">
       <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tinyxml2\tinyxml2.h">
+      <Filter>tinyxml2</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

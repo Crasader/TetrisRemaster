@@ -287,3 +287,10 @@ void TetrisGame::GameMode::updateCurrentBlock(Node* playArea)
 	nextBlock->removeFromParent();
 	initNextBlock();
 }
+
+void TetrisGame::GameMode::Save()
+{
+	static const char* xml = "<element/>";
+	tinyxml2::XMLDocument doc;
+	doc.Parse(xml);
+}

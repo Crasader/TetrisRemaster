@@ -6,6 +6,7 @@ ui::Button* TetrisGame::StartMenuScene::btnAbout = nullptr;
 ui::Button* TetrisGame::StartMenuScene::btnSetting = nullptr;
 ui::Button* TetrisGame::StartMenuScene::btnHighScore = nullptr;
 ui::Button* TetrisGame::StartMenuScene::btnQuit = nullptr;
+ui::CheckBox* TetrisGame::StartMenuScene::tglMusic = nullptr;
 
 void TetrisGame::StartMenuScene::handleButtonsClick()
 {
@@ -43,6 +44,21 @@ void TetrisGame::StartMenuScene::handleButtonsClick()
 		experimental::AudioEngine::play2d(menuClick_SFX_Path);
 		Director::getInstance()->end();
 	});
+
+	tglMusic->addEventListener([=](Ref* ref, ui::CheckBox::EventType e)
+	{
+		experimental::AudioEngine::play2d(menuClick_SFX_Path);
+		if (e == ui::CheckBox::EventType::SELECTED)
+		{
+			experimental::AudioEngine::setVolume(
+				AppDelegate::getBackgroundMusicId(), 1.0f);
+		}
+		else
+		{
+			experimental::AudioEngine::setVolume(
+				AppDelegate::getBackgroundMusicId(), 0.0f);
+		}
+	});
 }
 
 cocos2d::Scene * TetrisGame::StartMenuScene::createScene()
@@ -61,9 +77,14 @@ cocos2d::Scene * TetrisGame::StartMenuScene::createScene()
 	btnSetting = dynamic_cast<ui::Button*>(scene->getChildByName("btnSetting"));
 	btnHighScore = dynamic_cast<ui::Button*>(scene->getChildByName("btnHighScore"));
 	btnQuit = dynamic_cast<ui::Button*>(scene->getChildByName("btnQuit"));
-	
-	auto *galaxy_bg = dynamic_cast<Sprite*>(scene->getChildByName("galaxy-bg"));
-	
+
+	tglMusic = ui::CheckBox::create("ui/audioOff.png", "ui/audioOn.png");
+	tglMusic->setPosition(Vec2(292.f, 63.f));
+	tglMusic->setSelected(true);
+	scene->addChild(tglMusic);
+
+
+	auto* galaxy_bg = dynamic_cast<Sprite*>(scene->getChildByName("galaxy-bg"));
 
 	// add background scoller to this scene
 	BackgroundScroller bg_scroller(scene, galaxy_bg, 100, 1330, 0);

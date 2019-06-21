@@ -19,6 +19,8 @@ namespace TetrisGame {
 		static ui::Button* btnSetting;
 		static ui::Button* btnHighScore;
 		static ui::Button* btnQuit;
+
+		static ui::CheckBox* tglMusic;
 		
 		static void handleButtonsClick();
 

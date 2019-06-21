@@ -143,8 +143,8 @@
 						},
 						"opacity": 255,
 						"position": {
-							"x": 517,
-							"y": 640
+							"x": 525,
+							"y": 671
 						},
 						"skewX": 0,
 						"skewY": 0,
@@ -185,7 +185,7 @@
 						"opacity": 255,
 						"position": {
 							"x": 521,
-							"y": 471
+							"y": 443
 						},
 						"rotationSkewX": 0,
 						"rotationSkewY": 0,
@@ -267,7 +267,7 @@
 						"opacity": 255,
 						"position": {
 							"x": 521,
-							"y": 355
+							"y": 327
 						},
 						"rotationSkewX": 0,
 						"rotationSkewY": 0,
@@ -349,7 +349,7 @@
 						"opacity": 255,
 						"position": {
 							"x": 521,
-							"y": 238
+							"y": 210
 						},
 						"rotationSkewX": 0,
 						"rotationSkewY": 0,

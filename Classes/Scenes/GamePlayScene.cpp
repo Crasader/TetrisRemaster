@@ -1,7 +1,7 @@
 #include "GamePlayScene.h"
 #include "PauseMenuScene.h"
 #include "Blocks/Block.h"
-
+#include "AppDelegate.h"
 
 
 void TetrisGame::GamePlayScene::drawGrid()
@@ -53,7 +53,7 @@ bool TetrisGame::GamePlayScene::init()
 	{
 		return false;
 	}
-
+	this->key = &AppDelegate::controlInfoMap;
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 
 	drawPlayArea();
@@ -197,14 +197,14 @@ void TetrisGame::GamePlayScene::drawUI()
 
 void TetrisGame::GamePlayScene::onKeyPressed(EventKeyboard::KeyCode keycode, Event* e)
 {
-	if (keycode == key[MoveLeft])
+	if (keycode == (*key)[MoveLeft])
 	{
 		if (this->game->canMoveLeft())
 		{
 			this->game->moveBlockByLeft();
 		}
 	}
-	else if (keycode == key[MoveRight])
+	else if (keycode == (*key)[MoveRight])
 	{
 		if (this->game->canMoveRight())
 		{

@@ -16,15 +16,8 @@ namespace TetrisGame {
 	};
 
 	class GamePlayScene : public cocos2d::Scene {
-	public:
-		std::map<PlayerAction, EventKeyboard::KeyCode> key = {
-			{PlayerAction::MoveLeft, EventKeyboard::KeyCode::KEY_A},
-			{PlayerAction::MoveRight, EventKeyboard::KeyCode::KEY_D},
-			{PlayerAction::HardFall, EventKeyboard::KeyCode::KEY_S},
-			{PlayerAction::Rotate90, EventKeyboard::KeyCode::KEY_R},
-		};
-
 	private:
+		std::map<PlayerAction, EventKeyboard::KeyCode> *key = nullptr;
 		int currentScore;
 		std::vector<int> highScore;
 		GameMode *game = nullptr;

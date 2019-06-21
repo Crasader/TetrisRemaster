@@ -26,6 +26,7 @@
 #define  _APP_DELEGATE_H_
 
 #include "cocos2d.h"
+#include "PlayerAction.h"
 
 /**
 @brief    The cocos2d Application.
@@ -37,6 +38,10 @@ class  AppDelegate : private cocos2d::Application
 private:
 	static int backgroundMusicId;
 public:
+	// Game Global config variable
+	static std::map<TetrisGame::PlayerAction, cocos2d::EventKeyboard::KeyCode> controlInfoMap;
+
+
     AppDelegate();
     virtual ~AppDelegate();
 

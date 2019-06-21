@@ -22,6 +22,9 @@
     <Filter Include="tinyxml2">
       <UniqueIdentifier>{9b7e9b5b-eb43-4716-af0b-2eb044219786}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Utils">
+      <UniqueIdentifier>{fbbcadbc-9990-47fa-aaa9-333d004b6050}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -183,8 +186,9 @@
     <ClCompile Include="..\creator_to_cocos2dx\reader\dragonbones\textures\TextureData.cpp">
       <Filter>reader</Filter>
     </ClCompile>
-    <ClCompile Include="..\tinyxml2\tinyxml2.cpp">
-      <Filter>tinyxml2</Filter>
+    <ClCompile Include="..\Classes\Scenes\SettingScene.cpp">
+      <Filter>src\Scenes</Filter>
+    </ClCompile>
     <ClCompile Include="..\Classes\Scenes\HighScoreScene.cpp">
       <Filter>src\Scenes</Filter>
     </ClCompile>
@@ -427,8 +431,12 @@
     <ClInclude Include="..\creator_to_cocos2dx\reader\dragonbones\textures\TextureData.h">
       <Filter>reader</Filter>
     </ClInclude>
-    <ClInclude Include="..\tinyxml2\tinyxml2.h">
-      <Filter>tinyxml2</Filter>
+    <ClInclude Include="..\Classes\Scenes\SettingScene.h">
+      <Filter>src\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\KeyboardCode2String.h">
+      <Filter>src\Utils</Filter>
+    </ClInclude>
     <ClInclude Include="..\Classes\Scenes\HighScoreScene.h">
       <Filter>src\Scenes</Filter>
     </ClInclude>

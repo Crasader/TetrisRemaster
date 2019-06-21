@@ -166,6 +166,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)\Resources\" /D /E /I /F /Y
     <ClCompile Include="..\Classes\Scenes\HighScoreScene.cpp" />
     <ClCompile Include="..\Classes\Scenes\LoseScene.cpp" />
     <ClCompile Include="..\Classes\Scenes\PauseMenuScene.cpp" />
+    <ClCompile Include="..\Classes\Scenes\SettingScene.cpp" />
     <ClCompile Include="..\Classes\Scenes\StartMenuScene.cpp" />
     <ClCompile Include="..\Classes\SurvivalMode.cpp" />
     <ClCompile Include="..\Classes\BackgroundScroller.cpp" />
@@ -203,7 +204,6 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)\Resources\" /D /E /I /F /Y
     <ClCompile Include="..\creator_to_cocos2dx\reader\dragonbones\textures\TextureData.cpp" />
     <ClCompile Include="..\creator_to_cocos2dx\reader\ui\PageView.cpp" />
     <ClCompile Include="..\creator_to_cocos2dx\reader\ui\RichtextStringVisitor.cpp" />
-    <ClCompile Include="..\tinyxml2\tinyxml2.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -217,6 +217,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)\Resources\" /D /E /I /F /Y
     <ClInclude Include="..\Classes\Blocks\ZBlock.h" />
     <ClInclude Include="..\Classes\define.h" />
     <ClInclude Include="..\Classes\GameMode.h" />
+    <ClInclude Include="..\Classes\KeyboardCode2String.h" />
     <ClInclude Include="..\Classes\Player.h" />
     <ClInclude Include="..\Classes\PlayerAction.h" />
     <ClInclude Include="..\Classes\PuzzleMode.h" />
@@ -226,6 +227,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)\Resources\" /D /E /I /F /Y
     <ClInclude Include="..\Classes\Scenes\HighScoreScene.h" />
     <ClInclude Include="..\Classes\Scenes\LoseScene.h" />
     <ClInclude Include="..\Classes\Scenes\PauseMenuScene.h" />
+    <ClInclude Include="..\Classes\Scenes\SettingScene.h" />
     <ClInclude Include="..\Classes\Scenes\StartMenuScene.h" />
     <ClInclude Include="..\Classes\SurvivalMode.h" />
     <ClInclude Include="..\Classes\BackgroundScroller.h" />
@@ -286,7 +288,6 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)\Resources\" /D /E /I /F /Y
     <ClInclude Include="..\creator_to_cocos2dx\reader\Macros.h" />
     <ClInclude Include="..\creator_to_cocos2dx\reader\ui\PageView.h" />
     <ClInclude Include="..\creator_to_cocos2dx\reader\ui\RichtextStringVisitor.h" />
-    <ClInclude Include="..\tinyxml2\tinyxml2.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,6 @@
 #include "StartMenuScene.h"
+#include "AppDelegate.h"
+#include "SettingScene.h"
 #include "HighScoreScene.h"
 
 ui::Button* TetrisGame::StartMenuScene::btnNewGame = nullptr;
@@ -32,6 +34,8 @@ void TetrisGame::StartMenuScene::handleButtonsClick()
 	btnSetting->addClickEventListener([=](Ref*)
 	{
 		experimental::AudioEngine::play2d(menuClick_SFX_Path);
+		auto scene = SettingScene::createScene();
+		Director::getInstance()->pushScene(scene);
 	});
 
 	btnHighScore->addClickEventListener([=](Ref*)

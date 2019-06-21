@@ -158,10 +158,12 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)\Resources\" /D /E /I /F /Y
     <ClCompile Include="..\Classes\Blocks\TBlock.cpp" />
     <ClCompile Include="..\Classes\Blocks\ZBlock.cpp" />
     <ClCompile Include="..\Classes\GameMode.cpp" />
+    <ClCompile Include="..\Classes\Player.cpp" />
     <ClCompile Include="..\Classes\PuzzleMode.cpp" />
     <ClCompile Include="..\Classes\Scenes\ChooseModeScene.cpp" />
     <ClCompile Include="..\Classes\Scenes\GamePlayScene.cpp" />
     <ClCompile Include="..\Classes\Scenes\HelloWorldScene.cpp" />
+    <ClCompile Include="..\Classes\Scenes\HighScoreScene.cpp" />
     <ClCompile Include="..\Classes\Scenes\LoseScene.cpp" />
     <ClCompile Include="..\Classes\Scenes\PauseMenuScene.cpp" />
     <ClCompile Include="..\Classes\Scenes\StartMenuScene.cpp" />
@@ -215,11 +217,13 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)\Resources\" /D /E /I /F /Y
     <ClInclude Include="..\Classes\Blocks\ZBlock.h" />
     <ClInclude Include="..\Classes\define.h" />
     <ClInclude Include="..\Classes\GameMode.h" />
+    <ClInclude Include="..\Classes\Player.h" />
     <ClInclude Include="..\Classes\PlayerAction.h" />
     <ClInclude Include="..\Classes\PuzzleMode.h" />
     <ClInclude Include="..\Classes\Scenes\ChooseModeScene.h" />
     <ClInclude Include="..\Classes\Scenes\GamePlayScene.h" />
     <ClInclude Include="..\Classes\Scenes\HelloWorldScene.h" />
+    <ClInclude Include="..\Classes\Scenes\HighScoreScene.h" />
     <ClInclude Include="..\Classes\Scenes\LoseScene.h" />
     <ClInclude Include="..\Classes\Scenes\PauseMenuScene.h" />
     <ClInclude Include="..\Classes\Scenes\StartMenuScene.h" />

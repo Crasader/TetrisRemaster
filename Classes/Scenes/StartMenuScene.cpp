@@ -1,4 +1,5 @@
 #include "StartMenuScene.h"
+#include "HighScoreScene.h"
 
 ui::Button* TetrisGame::StartMenuScene::btnNewGame = nullptr;
 ui::Button* TetrisGame::StartMenuScene::btnContinue = nullptr;
@@ -36,6 +37,15 @@ void TetrisGame::StartMenuScene::handleButtonsClick()
 	btnHighScore->addClickEventListener([=](Ref*)
 	{
 		experimental::AudioEngine::play2d(menuClick_SFX_Path);
+
+		auto players = std::vector<Player>({
+			{Player("Ninh", 50)},
+			{Player("Phu", 100)},
+			{Player("Thanos", 58)}
+		});
+
+		auto scene = HighScoreScene::create(players);
+		Director::getInstance()->pushScene(scene);
 	});
 
 	// sfx when click

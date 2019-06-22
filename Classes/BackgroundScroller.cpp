@@ -2,21 +2,8 @@
 
 void BackgroundScroller::startScroll()
 {
-	_scene->schedule([
-		_maxY = _maxY,
-		_minY = _minY,
-		_speed = _speed,
-		_background = _background](float delta)
-	{
-		static auto direction = 1;
-	
-		auto position = _background->getPosition();
-		
-		if (position.y >= _maxY || position.y <= _minY)
-			direction *= -1;
-		
-		position.y += (direction * _speed * delta);
-		
-		_background->setPosition(position);
-	}, "BG_Scroller");
+	auto goUp = MoveBy::create(_speed, Vec2(0, -_distance));
+	auto goDown = goUp->reverse();
+	auto seq = Sequence::create(goUp, goDown, nullptr);
+	_background->runAction(RepeatForever::create(seq));
 }

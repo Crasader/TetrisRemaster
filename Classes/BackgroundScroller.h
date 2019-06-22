@@ -6,26 +6,17 @@ using namespace cocos2d;
 class BackgroundScroller
 {
 private :
-	Scene* _scene;
 	Sprite* _background;
-	float _speed;
-	float _maxY;
-	float _minY;
-
+	float _speed = 0;
+	float _distance = 0;
 public:
-
-	BackgroundScroller(Scene* scene, 
-		Sprite* sprite, 
-		float speed, 
-		float max_y,
-		float min_y)
-		: _speed(speed),
-		  _maxY(max_y),
-		  _minY(min_y)
+	BackgroundScroller(Sprite* sprite, float speed, float distance)
+		: _background(sprite),
+		  _speed(speed),
+		  _distance(distance)
 	{
-		this->_scene = scene;
-		this->_background = sprite;
 	}
+	
 	void startScroll();
 };
 

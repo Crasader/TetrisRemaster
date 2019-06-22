@@ -1,4 +1,5 @@
 #include "HighScoreScene.h"
+#include "BackgroundScroller.h"
 
 HighScoreScene* HighScoreScene::create(std::vector<Player> players)
 {
@@ -58,7 +59,6 @@ void HighScoreScene::initListView(Size VISIBLE_SIZE, const char* kenney_font_pat
 		auto lblScore = ui::Text::create(StringUtils::format("%d", player.getScore()), kenney_font_path, 40);
 		lblScore->setLayoutParameter(rp_RightCenter);
 
-
 		itemLstVw->addChild(lblName);
 		itemLstVw->addChild(lblScore);
 
@@ -95,6 +95,10 @@ void HighScoreScene::initBackground()
 	auto galaxy_bg = Sprite::create("creator/ui/Space-Background-Tiled.png");
 	galaxy_bg->setPosition(Vec2(507, 1330));
 	this->Node::addChild(galaxy_bg, -1); // Tree In-order travel, <0 is left tree, >=0 is right tree 
+
+	auto bg_size = galaxy_bg->getContentSize();
+	BackgroundScroller bg_scroller(galaxy_bg, 10, bg_size.height / 2);
+	bg_scroller.startScroll();
 }
 
 bool HighScoreScene::init()

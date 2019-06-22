@@ -1,9 +1,10 @@
-﻿#include "SettingScene.h"
+#include "SettingScene.h"
 #include "KeyboardCode2String.h"
 #include "AudioEngine.h"
 #include "ui/UIText.h"
 #include "GamePlayScene.h"
 #include "AppDelegate.h"
+#include "BackgroundScroller.h"
 
 cocos2d::Scene* TetrisGame::SettingScene::createScene()
 {
@@ -31,6 +32,11 @@ void TetrisGame::SettingScene::initBackground()
 	auto galaxy_bg = Sprite::create("creator/ui/Space-Background-Tiled.png");
 	galaxy_bg->setPosition(Vec2(507, 1330));
 	this->Node::addChild(galaxy_bg, -1); // Tree In-order travel, <0 is left tree, >=0 is right tree 
+
+
+	auto bg_size = galaxy_bg->getContentSize();
+	BackgroundScroller bg_scroller(galaxy_bg, 10, bg_size.height / 2);
+	bg_scroller.startScroll();
 }
 
 void TetrisGame::SettingScene::initListView(const char* kenney_font_path, Size VISIBLE_SIZE)

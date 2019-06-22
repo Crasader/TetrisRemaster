@@ -101,7 +101,8 @@ cocos2d::Scene * TetrisGame::StartMenuScene::createScene()
 	auto* galaxy_bg = dynamic_cast<Sprite*>(scene->getChildByName("galaxy-bg"));
 
 	// add background scoller to this scene
-	BackgroundScroller bg_scroller(scene, galaxy_bg, 100, 1330, 0);
+	auto bg_size = galaxy_bg->getContentSize();
+	BackgroundScroller bg_scroller(galaxy_bg, 10, bg_size.height / 2);
 	bg_scroller.startScroll();
 
 

@@ -6,6 +6,7 @@
 #include "SurvivalMode.h"
 #include "define.h"
 #include "PlayerAction.h"
+#include "ui/UILayout.h"
 
 USING_NS_CC;
 
@@ -25,13 +26,15 @@ namespace TetrisGame {
 		Label* txtCurrent = nullptr;
 		Node* nextBlockContainer = nullptr;	// use this Node as container to add custom Node inherited from Block: TBlock, OBlock,...
 		Node* playArea = nullptr;	// play area container
+		ui::Layout* myDlg = nullptr;	// enter name dialog
 		
 		void drawGrid();
 		void addPauseButton();
 		void initGameMode();
+		void initDialog();
 		void drawPlayArea();
 		void drawUI();
-
+		void showDialog();		// call this when game over to show up enter name dialog
 		void onKeyPressed(EventKeyboard::KeyCode keycode, Event* e);
 	public:
 		static cocos2d::Scene* createScene();

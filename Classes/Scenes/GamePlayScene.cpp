@@ -47,6 +47,51 @@ void TetrisGame::GamePlayScene::initGameMode()
 	playArea->addChild(currentBlock);
 }
 
+void TetrisGame::GamePlayScene::initDialog()
+{
+	auto windowsSize = Director::getInstance()->getVisibleSize();
+
+	// Enter name dialog
+	Size dlgSize(440, 240);
+	auto pos = Vec2(windowsSize.width / 2, windowsSize.height / 2);
+	float margin = 10;
+	
+	// layout container
+	myDlg = ui::Layout::create();
+	myDlg->setBackGroundImageScale9Enabled(true);
+	myDlg->setBackGroundImage("ui/grey_panel.png");
+	myDlg->setContentSize(dlgSize);
+	myDlg->setAnchorPoint(Vec2(0.5f, 0.5f));
+	myDlg->setOpacity(150);
+	myDlg->setPosition(pos);
+	myDlg->setTouchEnabled(true);
+	myDlg->setVisible(false);
+	this->Node::addChild(myDlg, 2);
+
+	// Text field
+	auto txtName = ui::TextField::create("Enter your name", "Arial", 30);
+	auto txtNamePos = Vec2(dlgSize.width / 2, dlgSize.height / 2);
+	txtName->setPosition(txtNamePos);
+	txtName->setTextColor(Color4B::BLACK);
+	myDlg->addChild(txtName);
+
+	auto textFieldTFF = TextFieldTTF::createWithTTF("", "", 30);
+
+	// OK button
+	auto kenney_font_path = "fonts/Kenney Future.ttf";
+	auto btnOK = ui::Button::create("ui/blue_button05.png");
+	auto btnOK_MARGIN_TOP = 70;
+	btnOK->setPosition(Vec2(txtNamePos.x, txtNamePos.y - btnOK_MARGIN_TOP));
+	btnOK->setTitleLabel(Label::createWithTTF("OK", kenney_font_path, 30));
+	btnOK->addClickEventListener([=](Ref*)
+	{
+		auto playerName = txtName->getString();
+		log("Entered name: %s", playerName.c_str());
+		
+	});
+	myDlg->addChild(btnOK);
+}
+
 bool TetrisGame::GamePlayScene::init()
 {
 	if (!Scene::init())
@@ -59,6 +104,8 @@ bool TetrisGame::GamePlayScene::init()
 	drawPlayArea();
 
 	drawUI();
+
+	initDialog();
 
 	auto listener = EventListenerKeyboard::create();
 	listener->onKeyPressed = CC_CALLBACK_2(GamePlayScene::onKeyPressed, this);
@@ -193,6 +240,13 @@ void TetrisGame::GamePlayScene::drawUI()
 	auto galaxy_bg = Sprite::create("creator/ui/Space-Background-Tiled.png");
 	galaxy_bg->setPosition(Vec2(507, 1330));
 	this->addChild(galaxy_bg, -1); // Tree In-order travel, <0 is left tree, >=0 is right tree 
+}
+
+void TetrisGame::GamePlayScene::showDialog()
+{
+	myDlg->setVisible(true);
+	myDlg->setScale(0);
+	myDlg->runAction(ScaleTo::create(0.5, 1.0));
 }
 
 void TetrisGame::GamePlayScene::onKeyPressed(EventKeyboard::KeyCode keycode, Event* e)

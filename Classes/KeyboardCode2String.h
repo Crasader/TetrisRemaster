@@ -87,4 +87,8 @@ std::map<EventKeyboard::KeyCode, const char*> KeyboardCode2String::keyMap = {
 	{EventKeyboard::KeyCode::KEY_LEFT_CTRL, "L CTRL"},
 	{EventKeyboard::KeyCode::KEY_RIGHT_CTRL, "R CTRL"},
 
+	{EventKeyboard::KeyCode::KEY_UP_ARROW, "UP ARROW"},
+	{EventKeyboard::KeyCode::KEY_DOWN_ARROW, "DOWN ARROW"},
+	{EventKeyboard::KeyCode::KEY_LEFT_ARROW, "LEFT ARROW"},
+	{EventKeyboard::KeyCode::KEY_RIGHT_ARROW, "RIGHT ARROW"},
 };

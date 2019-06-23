@@ -1,4 +1,4 @@
-#include "SettingScene.h"
+﻿#include "SettingScene.h"
 #include "KeyboardCode2String.h"
 #include "AudioEngine.h"
 #include "ui/UIText.h"
@@ -45,7 +45,7 @@ void TetrisGame::SettingScene::initListView(const char* kenney_font_path, Size V
 
 	// list view item widget
 	auto itemSize = Size(500.f, 40.f);
-
+	itemSize = Size(VISIBLE_SIZE.width/2, 40.f);
 
 	// input control list view
 	auto gameControlLstVw = ui::ListView::create();
@@ -79,7 +79,7 @@ void TetrisGame::SettingScene::initListView(const char* kenney_font_path, Size V
 
 		auto btnChangeControl = ui::Button::create("ui/blue_button05.png");
 		btnChangeControl->setTitleLabel(Label::createWithTTF(KeyboardCode2String::getName(pair.second),
-		                                                     "fonts/Kenney Future Narrow.ttf", 40));
+		                                                     "fonts/Kenney Future Narrow.ttf", 30));
 		btnChangeControl->setLayoutParameter(rp_RightCenter);
 
 
@@ -134,7 +134,7 @@ bool TetrisGame::SettingScene::init()
 void TetrisGame::SettingScene::onKeyPressed(EventKeyboard::KeyCode keyCode, Event* e)
 {
 	const char* keyName = KeyboardCode2String::getName(keyCode);
-	log("Key %s was pressed!", keyName);
+	log("Key %s was pressed! Value is %d", keyName, unsigned short(keyCode));
 
 
 	// only process if the button associate with has clicked

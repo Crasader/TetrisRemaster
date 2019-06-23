@@ -17,6 +17,7 @@ namespace TetrisGame {
 		static ui::Button* btnTimeRacing;
 		static ui::Button* btnBack;
 		static void handleButtonsClick();
+		static void initDifficultRadioButton(Scene* scene, Size SCREEN_SIZE);
 
 	public:
 		static cocos2d::Scene* createScene();

@@ -13,5 +13,9 @@ TetrisGame::Block* TetrisGame::TBlock::clone() const
 	aclone->setAnchorPoint(this->getAnchorPoint());
 	aclone->setContentSize(this->getContentSize());
 
+	while (aclone->currentAngle != this->currentAngle)
+	{
+		aclone->rotate();
+	}
 	return aclone;
 }

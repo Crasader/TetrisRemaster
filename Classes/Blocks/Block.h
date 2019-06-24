@@ -49,7 +49,13 @@ namespace TetrisGame
 		};
 
 	protected:
+		// angle + 90 when rotate() is called
+		int currentAngle = 0;
 
+	public:
+		int getCurrentAngle() const;
+		void setCurrentAngle(int current_angle);
+	protected:
 		// default color:
 		COLOR color = COLOR::GREEN;
 

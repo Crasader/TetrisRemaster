@@ -1,5 +1,15 @@
 #include "Block.h"
 
+int TetrisGame::Block::getCurrentAngle() const
+{
+	return currentAngle;
+}
+
+void TetrisGame::Block::setCurrentAngle(int current_angle)
+{
+	currentAngle = current_angle;
+}
+
 std::vector<std::vector<Sprite*>> TetrisGame::Block::getUnitBlocks() const
 {
 	return unitBlocks;
@@ -158,6 +168,7 @@ void TetrisGame::Block::rotate()
 	}
 
 	initContentSize();
+	currentAngle += 90;
 }
 
 void TetrisGame::Block::initContentSize()

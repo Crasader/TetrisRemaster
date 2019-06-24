@@ -63,10 +63,11 @@ void TetrisGame::GameMode::logCurrentBlockPosition()
 		{
 			if (shape[i][j] == 1)
 			{
-				ss << "[" << boardRow + i - rowBegin << ", " << boardCol + j << "] ";
-			}else
+				ss << StringUtils::format("[%2d, %2d] ", (int)(boardRow + i - rowBegin), (int)(boardCol + j));
+			}
+			else
 			{
-				ss << "      ";
+				ss << "         ";
 			}
 		}
 		log("%s", ss.str().c_str());

@@ -110,33 +110,52 @@ void TetrisGame::Block::rotate()
 	{
 		for (int col = 0; col < shapeSize; col++)
 		{
-			if (shape[row][col])
+			if (shape[row][col] == 1)
 			{
-				int newRow = 3 + col - shift;
-				int newCol = 3 - row;
+				int newRow = (shapeSize - 1) + col - shift;
+				int newCol = (shapeSize - 1) - row;
 
 				newShape[newRow][newCol] = 1;
-				this->removeChild(unitBlocks[row][col], true);
-				auto block = Sprite::create(color_map[color]);
-
-				block->setContentSize(Size(
-					TetrisGame::BLOCK_SIZE,
-					TetrisGame::BLOCK_SIZE));
-				
-				block->setPosition(
-					BLOCK_SIZE * newCol,
-					BLOCK_SIZE * (shape.size() - 1 - newRow));
-
-				block->setAnchorPoint(Vec2(0.f, 0.f));
-				
-				
-				this->addChild(block);
-				unitBlocks[newRow][newCol] = block;
 			}
 		}
 	}
 
 	shape = newShape;
+	for (auto& row : unitBlocks)
+		for (auto& unitBlock : row)
+		{
+			if (unitBlock != nullptr)
+			{
+				unitBlock->removeFromParent();
+				unitBlock = nullptr;
+			}
+		}
+
+	for (int row = 0; row < shapeSize; row++)
+	{
+		for (int col = 0; col < shapeSize; col++)
+		{
+			if (shape[row][col])
+			{
+				//this->removeChild(unitBlocks[row][col], true);
+				//unitBlocks[row][col] = NULL;
+				auto block = Sprite::create(color_map[color]);
+
+				block->setContentSize(Size(
+					TetrisGame::BLOCK_SIZE,
+					TetrisGame::BLOCK_SIZE));
+
+				block->setPosition(
+					BLOCK_SIZE * col,
+					BLOCK_SIZE * (shape.size() - 1 - row));
+
+				block->setAnchorPoint(Vec2(0.f, 0.f));
+
+				this->addChild(block);
+				unitBlocks[row][col] = block;
+			}
+		}
+	}
 
 	initContentSize();
 }

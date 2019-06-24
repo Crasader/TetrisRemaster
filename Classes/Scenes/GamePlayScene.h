@@ -22,6 +22,10 @@ namespace TetrisGame {
 		int currentScore;
 		std::vector<int> highScore;
 		GameMode *game = nullptr;
+	public:
+		GameMode* getGameMode() const;
+		void setGameMode(GameMode* game);
+	private:
 		Label* txtBest = nullptr;
 		Label* txtCurrent = nullptr;
 		Node* nextBlockContainer = nullptr;	// use this Node as container to add custom Node inherited from Block: TBlock, OBlock,...
@@ -56,8 +60,6 @@ namespace TetrisGame {
 		void Save();
 
 		void setMode(GAME_MODE);
-
-		void Update();
 
 		void update(float delta) override;
 	};

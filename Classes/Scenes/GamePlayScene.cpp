@@ -4,6 +4,16 @@
 #include "AppDelegate.h"
 
 
+TetrisGame::GameMode* TetrisGame::GamePlayScene::getGameMode() const
+{
+	return game;
+}
+
+void TetrisGame::GamePlayScene::setGameMode(GameMode* game)
+{
+	this->game = game;
+}
+
 void TetrisGame::GamePlayScene::drawGrid()
 {
 	auto visibleSize = Director::getInstance()->getVisibleSize();
@@ -142,12 +152,6 @@ void TetrisGame::GamePlayScene::setMode(GAME_MODE gameMode)
 	}
 	initGameMode();
 	this->scheduleUpdate();
-}
-
-void TetrisGame::GamePlayScene::Update()
-{
-	// TODO - implement GamePlayScene::Update
-	throw "Not yet implemented";
 }
 
 void TetrisGame::GamePlayScene::update(float delta)

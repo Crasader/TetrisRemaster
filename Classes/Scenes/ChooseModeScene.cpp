@@ -4,6 +4,14 @@ ui::Button* TetrisGame::ChooseModeScene::btnSurvival = nullptr;
 ui::Button* TetrisGame::ChooseModeScene::btnPuzzle = nullptr;
 ui::Button* TetrisGame::ChooseModeScene::btnTimeRacing = nullptr;
 ui::Button* TetrisGame::ChooseModeScene::btnBack = nullptr;
+TetrisGame::ChooseModeScene::Difficult TetrisGame::ChooseModeScene::currentDifficult
+	= Easy;
+std::map<TetrisGame::ChooseModeScene::Difficult, float> TetrisGame::ChooseModeScene::speed =
+{
+	{Easy, 1.0f},
+	{Medium, 0.5f},
+	{Hard, 0.25f},
+};
 
 void TetrisGame::ChooseModeScene::handleButtonsClick()
 {
@@ -13,6 +21,7 @@ void TetrisGame::ChooseModeScene::handleButtonsClick()
 		experimental::AudioEngine::play2d(menuClick_SFX_Path);
 		auto scene = GamePlayScene::create();
 		scene->setMode(GAME_MODE::SURVIVAL);
+		scene->getGameMode()->setSpeed(speed[currentDifficult]);
 
 		Director::getInstance()->popScene();
 		Director::getInstance()->replaceScene(scene);
@@ -24,6 +33,7 @@ void TetrisGame::ChooseModeScene::handleButtonsClick()
 
 		auto scene = GamePlayScene::create();
 		scene->setMode(GAME_MODE::PUZZLE);
+		scene->getGameMode()->setSpeed(speed[currentDifficult]);
 
 		Director::getInstance()->popScene();
 		Director::getInstance()->replaceScene(scene);
@@ -43,14 +53,14 @@ void TetrisGame::ChooseModeScene::handleButtonsClick()
 
 void TetrisGame::ChooseModeScene::initDifficultRadioButton(Scene* scene, Size SCREEN_SIZE)
 {
-	const char * buttonsTitle[] = { "Easy", "Medium", "Hard" };
+	const char* buttonsTitle[] = {"Easy", "Medium", "Hard"};
 	int TOTAL_BUTTON = 3;
 	auto SPACE_BETWEEN = 200;
 	// difficult radio group
 
 	// create radio group
 	auto RADIO_GROUP_MARGIN_BOTTOM = 200;
-	auto GROUP_SIZE = Size((TOTAL_BUTTON - 1)* SPACE_BETWEEN, 70);
+	auto GROUP_SIZE = Size((TOTAL_BUTTON - 1) * SPACE_BETWEEN, 70);
 	auto difficultRadioGroup = ui::RadioButtonGroup::create();
 	difficultRadioGroup->setContentSize(GROUP_SIZE);
 	difficultRadioGroup->setColor(Color3B::WHITE);
@@ -77,13 +87,14 @@ void TetrisGame::ChooseModeScene::initDifficultRadioButton(Scene* scene, Size SC
 
 	// Event handle
 	difficultRadioGroup->addEventListener([=](
-		Ref* sender, int index, ui::RadioButtonGroup::EventType e )
-	{
-		log("Difficult selected index: %d", index);
-	});
+		Ref* sender, int index, ui::RadioButtonGroup::EventType e)
+		{
+			log("Difficult selected index: %d", index);
+			currentDifficult = static_cast<ChooseModeScene::Difficult>(index);
+		});
 }
 
-cocos2d::Scene * TetrisGame::ChooseModeScene::createScene()
+cocos2d::Scene* TetrisGame::ChooseModeScene::createScene()
 {
 	creator::CreatorReader* reader = creator::CreatorReader::createWithFilename("creator/scenes/ChooseMode.ccreator");
 	reader->setup();
@@ -94,7 +105,7 @@ cocos2d::Scene * TetrisGame::ChooseModeScene::createScene()
 	btnTimeRacing = dynamic_cast<ui::Button*>(scene->getChildByName("btnTimeRacing"));
 	btnBack = dynamic_cast<ui::Button*>(scene->getChildByName("btnBack"));
 
-	auto *galaxy_bg = dynamic_cast<Sprite*>(scene->getChildByName("galaxy-bg"));
+	auto* galaxy_bg = dynamic_cast<Sprite*>(scene->getChildByName("galaxy-bg"));
 
 	// add background scoller to this scene
 	auto bg_size = galaxy_bg->getContentSize();

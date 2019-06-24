@@ -12,10 +12,19 @@ USING_NS_CC;
 namespace TetrisGame {
 	class ChooseModeScene : public cocos2d::Scene {
 	private:
+		enum Difficult
+		{
+			Easy,
+			Medium,
+			Hard,
+		};
+		
 		static ui::Button* btnSurvival;
 		static ui::Button* btnPuzzle;
 		static ui::Button* btnTimeRacing;
 		static ui::Button* btnBack;
+		static ChooseModeScene::Difficult currentDifficult;
+		static std::map<Difficult, float> speed;
 		static void handleButtonsClick();
 		static void initDifficultRadioButton(Scene* scene, Size SCREEN_SIZE);
 

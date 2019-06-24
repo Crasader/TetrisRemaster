@@ -214,6 +214,7 @@ void TetrisGame::GameMode::initCurrentBlock()
 
 	this->currentBlock->setPosition(pos);
 	this->currentBlock->setAnchorPoint(Vec2::ZERO);
+	this->currentBlockStartPos = pos;
 }
 
 TetrisGame::GameMode::GameMode()

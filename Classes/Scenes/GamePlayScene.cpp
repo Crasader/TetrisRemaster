@@ -2,6 +2,7 @@
 #include "PauseMenuScene.h"
 #include "Blocks/Block.h"
 #include "AppDelegate.h"
+#include "LoseScene.h"
 
 
 TetrisGame::GameMode* TetrisGame::GamePlayScene::getGameMode() const
@@ -97,6 +98,10 @@ void TetrisGame::GamePlayScene::initDialog()
 	{
 		auto playerName = txtName->getString();
 		log("Entered name: %s", playerName.c_str());
+
+		auto scene = LoseScene::createScene();
+		scene->setPlayer(Player(playerName, this->currentScore));
+		Director::getInstance()->replaceScene(scene);
 		
 	});
 	myDlg->addChild(btnOK);
@@ -156,8 +161,16 @@ void TetrisGame::GamePlayScene::setMode(GAME_MODE gameMode)
 
 void TetrisGame::GamePlayScene::update(float delta)
 {
+	if (this->game->isLose())
+	{
+		this->showDialog();
+		this->unscheduleUpdate();
+		return;
+	}
+
 	static float count_second = 0;
 	count_second += delta;
+	// not lose yet, still playable
 	if (count_second >= this->game->getSpeed())
 	{
 		if (this->game->canMoveDown())
@@ -172,6 +185,9 @@ void TetrisGame::GamePlayScene::update(float delta)
 		}
 		count_second = 0;
 	}
+
+	// update score
+	txtCurrent->setString(StringUtils::format("%d", currentScore));
 }
 
 void TetrisGame::GamePlayScene::drawPlayArea()
@@ -255,6 +271,11 @@ void TetrisGame::GamePlayScene::showDialog()
 
 void TetrisGame::GamePlayScene::onKeyPressed(EventKeyboard::KeyCode keycode, Event* e)
 {
+	if (this->game->isLose())
+	{
+		return;
+	}
+
 	if (keycode == (*key)[MoveLeft])
 	{
 		if (this->game->canMoveLeft())

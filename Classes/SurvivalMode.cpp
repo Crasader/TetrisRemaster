@@ -7,7 +7,7 @@ bool TetrisGame::SurvivalMode::isWin()
 
 bool TetrisGame::SurvivalMode::isLose()
 {
-	return true;
+	return currentBlock->getPosition() == currentBlockStartPos && !canMoveDown();
 }
 
 bool TetrisGame::SurvivalMode::virtual_computeScore()

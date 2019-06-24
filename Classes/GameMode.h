@@ -20,7 +20,7 @@ namespace TetrisGame {
 
 		Block* nextBlock;
 
-		
+		Vec2 currentBlockStartPos;
 	protected:
 		Block* getRandomBlock();
 

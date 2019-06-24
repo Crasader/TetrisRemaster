@@ -290,6 +290,13 @@ void TetrisGame::GamePlayScene::onKeyPressed(EventKeyboard::KeyCode keycode, Eve
 			this->game->moveBlockByRight();
 		}
 	}
+	else if (keycode == (*key)[Rotate90])
+	{
+		if (this->game->isRotatable())
+		{
+		this->game->rotateBlock();
+		}
+	}
 }
 
 void TetrisGame::GamePlayScene::addPauseButton()

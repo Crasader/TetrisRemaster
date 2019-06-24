@@ -85,6 +85,62 @@ std::vector<int> TetrisGame::Block::getLowestRows()
 	return lowestRows;
 }
 
+void TetrisGame::Block::rotate()
+{
+	int shapeSize = shape.size();
+	Vec2 anchor = Vec2::ZERO;
+	std::vector<std::vector<short>> newShape;
+	newShape.resize(shapeSize);
+	for (auto& v : newShape)
+		v.resize(shapeSize);
+
+	std::vector<int> maxYs;
+	maxYs.reserve(shapeSize);
+	std::for_each(shape.begin(), shape.end(), [&maxYs](const std::vector<short>& v) {
+		int maxY = v.size() - 1;
+		while (v[maxY] != 1 && maxY > 0)
+			maxY--;
+
+		maxYs.push_back(maxY);
+	});
+
+	int shift = *std::max_element(maxYs.begin(), maxYs.end());
+
+	for (int row = 0; row < shapeSize; row++)
+	{
+		for (int col = 0; col < shapeSize; col++)
+		{
+			if (shape[row][col])
+			{
+				int newRow = 3 + col - shift;
+				int newCol = 3 - row;
+
+				newShape[newRow][newCol] = 1;
+				this->removeChild(unitBlocks[row][col], true);
+				auto block = Sprite::create(color_map[color]);
+
+				block->setContentSize(Size(
+					TetrisGame::BLOCK_SIZE,
+					TetrisGame::BLOCK_SIZE));
+				
+				block->setPosition(
+					BLOCK_SIZE * newCol,
+					BLOCK_SIZE * (shape.size() - 1 - newRow));
+
+				block->setAnchorPoint(Vec2(0.f, 0.f));
+				
+				
+				this->addChild(block);
+				unitBlocks[newRow][newCol] = block;
+			}
+		}
+	}
+
+	shape = newShape;
+
+	initContentSize();
+}
+
 void TetrisGame::Block::initContentSize()
 {
 	auto maxWidth = 0;

@@ -159,6 +159,52 @@ bool TetrisGame::GameMode::canMoveDown()
 	return true;
 }
 
+bool TetrisGame::GameMode::isRotatable()
+{
+	auto pos = this->currentBlock->getPosition();
+	auto leftMostCol = this->currentBlock->getLeftMostCols();
+	auto rightMostCol = this->currentBlock->getRightMostCols();
+	auto shape = this->currentBlock->getShape();
+
+	int maxColUnitBlock = -1;
+	int colMaxUnitBlock;
+	for (int col = 0; col < shape.size(); col++)
+	{
+		int curColUnitBlock = 0;
+
+		for (int row = 0; row < shape.size(); row++)
+		{
+			if (shape[row][col])
+				curColUnitBlock++;
+		}
+
+		if (curColUnitBlock > maxColUnitBlock)
+		{
+			maxColUnitBlock = curColUnitBlock;
+			colMaxUnitBlock = col;
+		}
+	}
+	
+	if (maxColUnitBlock >= 2)
+	{
+		int newLeftCol = colMaxUnitBlock - 1;
+		int boardCol = pos.x / BLOCK_SIZE + newLeftCol;
+
+		// hit the left wall
+		if (boardCol <= LEFT_WALL)
+			return false;
+
+		int newRightCol = colMaxUnitBlock + maxColUnitBlock - 1;
+		boardCol = pos.x / BLOCK_SIZE + newRightCol;
+
+		// hit the right wall
+		if (boardCol >= RIGHT_WALL)
+			return false;
+	}
+	
+	return true;
+}
+
 bool TetrisGame::GameMode::isMoveable()
 {
 	return canMoveDown() || canMoveLeft() || canMoveRight();
@@ -262,8 +308,7 @@ void TetrisGame::GameMode::forceBlockFall()
 
 void TetrisGame::GameMode::rotateBlock()
 {
-	// TODO - implement GameMode::rotateBlock
-	throw "Not yet implemented";
+	this->currentBlock->rotate();
 }
 
 TetrisGame::Block* TetrisGame::GameMode::getNextBlock()

@@ -77,6 +77,7 @@ namespace TetrisGame
 		std::vector<int> getRightMostCols();
 		std::vector<int> getLowestRows();
 		//virtual void virtual_Rotate();
+		void rotate();
 
 		virtual bool init();
 

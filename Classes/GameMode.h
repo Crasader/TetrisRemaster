@@ -42,6 +42,8 @@ namespace TetrisGame {
 		bool canMoveDown();
 
 		bool isMoveable();
+		
+		bool isRotatable();
 
 		void clearRow(int index);
 
